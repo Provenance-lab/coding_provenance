@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Coding Provenance Workshop"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Intro
+      - href: about.qmd
+        text: About
+      - href: materials.qmd
+        text: Materials
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+
+

@@ -1,0 +1,13 @@
+---
+title: "Coding Provenance: Workshop on Computational Provenance Research"
+---
+
+# Welcome to our first edition of the Coding Provenance Workshop
+
+A Collaboration between Leuphana’s Provenance Lab and the Getty Provenance Index
+Leuphana University of Lüneburg, December 18–21, 2025
+
+## Content
+- Data 1
+- Data 2
+- Data 3

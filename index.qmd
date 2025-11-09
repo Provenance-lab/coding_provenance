@@ -1,14 +1,91 @@
 ---
-title: "Coding Provenance: Workshop on Computational Provenance Research"
+title: "Coding Provenance Workshop. First Edition"
 toc: false
+page-layout: full
+---
 ---
 
-# Welcome to our first edition of the Coding Provenance Workshop
+**From 18 to 21 December 2025 — Leuphana University**
 
-A Collaboration between Leuphana’s Provenance Lab and the Getty Provenance Index
-Leuphana University of Lüneburg, December 18–21, 2025
+**Room C.40.606, Seminarraum, [Main Building at Leuphana University](https://www.leuphana.de/en/university/maps.html)**
 
-## Content
-- Data 1
-- Data 2
-- Data 3
+---
+
+This workshop explores the emerging field of **computational provenance research**, bringing together scholars, curators, and data scientists to discuss digital approaches to provenance, data modeling, and computational analysis.
+
+
+### What You Need
+
+- **You need to bring your own laptop**
+- A **Google account**, as we’ll be using **Google Colab** for hands-on sessions.  
+- If you prefer, you may use your own local environment (e.g., **Visual Studio Code** or **Jupyter Notebooks**).  
+- We will be coding in **Python** throughout the workshop.
+
+
+
+### Modules
+
+- OCR  
+- Data Models
+- Python Language  
+- From Text to Data
+- Data Analysis  
+- Data Visualization  
+- Resources
+
+
+### December Schedule
+
+<table style="width:100%; border-collapse:separate; border-spacing:15px; text-align:left;">
+  <tr>
+    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 1 – Thursday, December 18</p>
+      <ul>
+        <li><strong>15:30</strong> – Participant registration and reception</li>
+        <li><strong>16:00</strong> – Informal panel <em>(Sandra, Lynn, Giulia, Bárbara)</em></li>
+        <li><strong>17:00</strong> – Food cocktail <em>(ends by 18:00 sharp)</em></li>
+        <li><strong>18:30</strong> – Museum & drinks</li>
+      </ul>
+    </td>
+
+    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 2 – Friday, December 19</p>
+      <ul>
+        <li><strong>09:00</strong> – From Text to Data (OCR)</li>
+        <li><strong>10:30</strong> – Coffee Break</li>
+        <li><strong>11:00</strong> – From Data to Structured Data <em>(Text processing in NLP, Standard Formats, LOD)</em></li>
+        <li><strong>13:00</strong> – Lunch Break</li>
+        <li><strong>14:15</strong> – Data Analysis: quantitative & computational techniques <em>(NLP for text analysis)</em></li>
+        <li><strong>15:30</strong> – Coffee Break</li>
+        <li><strong>16:00</strong> – Data Analysis (continued)</li>
+        <li><strong>17:30</strong> – Salt Museum</li>
+      </ul>
+    </td>
+
+    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 3 – Saturday, December 20</p>
+      <ul>
+        <li><strong>09:30</strong> – Knowledge Design</li>
+        <li><strong>13:00</strong> – Lunch Break</li>
+        <li><strong>14:00</strong> – Information Visualisation Session</li>
+        <li><strong>16:00</strong> – Information Visualisation (continued)</li>
+        <li><strong>17:30</strong> – Work in groups</li>
+      </ul>
+    </td>
+
+    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 4 – Sunday, December 21</p>
+      <ul>
+        <li><strong>10:00</strong> – Participants’ presentations</li>
+        <li><strong>13:00</strong> – Wrap-up & goodbye</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+---
+
+<div style="font-size:0.9em; color:#555; margin-top:40px; border-top:1px solid #eee; padding-top:15px;">
+© 2025 Coding Provenance Workshop — Licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.  
+You are free to reuse and adapt the materials, provided you **cite this workshop**.
+</div>

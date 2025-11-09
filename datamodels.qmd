@@ -1,0 +1,14 @@
+---
+title: "Knowledge Design. Data Models, Ontologies & Controlled Vocabularies"
+toc: false
+page-layout: full
+---
+### Schema
+
+### Slides
+
+### Readings
+
+### Hands-on Activity
+
+### Materials 

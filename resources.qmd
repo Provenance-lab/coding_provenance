@@ -1,0 +1,5 @@
+---
+title: "Bibliography & other Resources"
+toc: false
+page-layout: full
+---

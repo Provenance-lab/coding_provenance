@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Coding Provenance: Workshop on Computational Provenance Research – Coding Provenance Workshop</title>
+<title>Coding Provenance Workshop. First Edition – Computational Provenance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,12 +34,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6f2445e140ececfe305c19f1c275fb99.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +66,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<!-- Google Fonts: Google Sans Code + Lato -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;600;700&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -79,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Coding Provenance Workshop</span>
+    <span class="navbar-title">Computational Provenance</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,15 +94,39 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Intro</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./materials.qmd"> 
-<span class="menu-text">Materials</span></a>
+    <a class="nav-link" href="./ocr.html"> 
+<span class="menu-text">OCR</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./datamodels.html"> 
+<span class="menu-text">Models</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./python.html"> 
+<span class="menu-text">Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./nlp.html"> 
+<span class="menu-text">Text</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./dataanalysis.html"> 
+<span class="menu-text">Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./datavisualization.html"> 
+<span class="menu-text">Visualization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -108,32 +136,21 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome-to-our-first-edition-of-the-coding-provenance-workshop" id="toc-welcome-to-our-first-edition-of-the-coding-provenance-workshop" class="nav-link active" data-scroll-target="#welcome-to-our-first-edition-of-the-coding-provenance-workshop">Welcome to our first edition of the Coding Provenance Workshop</a>
-  <ul class="collapse">
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Coding Provenance: Workshop on Computational Provenance Research</h1>
+<h1 class="title">Coding Provenance Workshop. First Edition</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -145,31 +162,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome-to-our-first-edition-of-the-coding-provenance-workshop" class="level1">
-<h1>Welcome to our first edition of the Coding Provenance Workshop</h1>
-<p>A Collaboration between Leuphana’s Provenance Lab and the Getty Provenance Index Leuphana University of Lüneburg, December 18–21, 2025</p>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
+<hr>
+<p><strong>From 18 to 21 December 2025 — Leuphana University</strong></p>
+<p><strong>Room C.40.606, Seminarraum, <a href="https://www.leuphana.de/en/university/maps.html">Main Building at Leuphana University</a></strong></p>
+<hr>
+<p>This workshop explores the emerging field of <strong>computational provenance research</strong>, bringing together scholars, curators, and data scientists to discuss digital approaches to provenance, data modeling, and computational analysis.</p>
+<section id="what-you-need" class="level3">
+<h3 data-anchor-id="what-you-need">What You Need</h3>
 <ul>
-<li>Data 1</li>
-<li>Data 2</li>
-<li>Data 3</li>
+<li><strong>You need to bring your own laptop</strong></li>
+<li>A <strong>Google account</strong>, as we’ll be using <strong>Google Colab</strong> for hands-on sessions.<br>
+</li>
+<li>If you prefer, you may use your own local environment (e.g., <strong>Visual Studio Code</strong> or <strong>Jupyter Notebooks</strong>).<br>
+</li>
+<li>We will be coding in <strong>Python</strong> throughout the workshop.</li>
 </ul>
-
-
 </section>
+<section id="modules" class="level3">
+<h3 data-anchor-id="modules">Modules</h3>
+<ul>
+<li>OCR<br>
+</li>
+<li>Data Models</li>
+<li>Python Language<br>
+</li>
+<li>From Text to Data</li>
+<li>Data Analysis<br>
+</li>
+<li>Data Visualization<br>
+</li>
+<li>Resources</li>
+</ul>
+</section>
+<section id="december-schedule" class="level3">
+<h3 data-anchor-id="december-schedule">December Schedule</h3>
+<table style="width:100%; border-collapse:separate; border-spacing:15px; text-align:left;">
+<tbody><tr>
+<td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+<p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">
+Day 1 – Thursday, December 18
+</p>
+<ul>
+<li>
+<strong>15:30</strong> – Participant registration and reception
+</li>
+<li>
+<strong>16:00</strong> – Informal panel <em>(Sandra, Lynn, Giulia, Bárbara)</em>
+</li>
+<li>
+<strong>17:00</strong> – Food cocktail <em>(ends by 18:00 sharp)</em>
+</li>
+<li>
+<strong>18:30</strong> – Museum &amp; drinks
+</li>
+</ul>
+</td>
+<td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+<p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">
+Day 2 – Friday, December 19
+</p>
+<ul>
+<li>
+<strong>09:00</strong> – From Text to Data (OCR)
+</li>
+<li>
+<strong>10:30</strong> – Coffee Break
+</li>
+<li>
+<strong>11:00</strong> – From Data to Structured Data <em>(Text processing in NLP, Standard Formats, LOD)</em>
+</li>
+<li>
+<strong>13:00</strong> – Lunch Break
+</li>
+<li>
+<strong>14:15</strong> – Data Analysis: quantitative &amp; computational techniques <em>(NLP for text analysis)</em>
+</li>
+<li>
+<strong>15:30</strong> – Coffee Break
+</li>
+<li>
+<strong>16:00</strong> – Data Analysis (continued)
+</li>
+<li>
+<strong>17:30</strong> – Salt Museum
+</li>
+</ul>
+</td>
+<td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+<p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">
+Day 3 – Saturday, December 20
+</p>
+<ul>
+<li>
+<strong>09:30</strong> – Knowledge Design
+</li>
+<li>
+<strong>13:00</strong> – Lunch Break
+</li>
+<li>
+<strong>14:00</strong> – Information Visualisation Session
+</li>
+<li>
+<strong>16:00</strong> – Information Visualisation (continued)
+</li>
+<li>
+<strong>17:30</strong> – Work in groups
+</li>
+</ul>
+</td>
+<td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
+<p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">
+Day 4 – Sunday, December 21
+</p>
+<ul>
+<li>
+<strong>10:00</strong> – Participants’ presentations
+</li>
+<li>
+<strong>13:00</strong> – Wrap-up &amp; goodbye
+</li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<hr>
+<div style="font-size:0.9em; color:#555; margin-top:40px; border-top:1px solid #eee; padding-top:15px;">
+<p>© 2025 Coding Provenance Workshop — Licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.<br>
+You are free to reuse and adapt the materials, provided you <strong>cite this workshop</strong>.</p>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -233,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/Provenance-lab\.github\.io\/coding_provenance\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

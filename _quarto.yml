@@ -3,20 +3,37 @@ project:
   output-dir: _site
 
 website:
-  title: "Coding Provenance Workshop"
+  title: "Computational Provenance"
   navbar:
+    background: "#ffffff"
     left:
       - href: index.qmd
-        text: Intro
+        text: Home
       - href: about.qmd
         text: About
-      - href: materials.qmd
-        text: Materials
+      - href: ocr.qmd
+        text: OCR
+      - href: datamodels.qmd
+        text: Models
+      - href: python.qmd
+        text: Python
+      - href: nlp.qmd
+        text: Text
+      - href: dataanalysis.qmd
+        text: Analysis
+      - href: datavisualization.qmd
+        text: Visualization
+      - href: resources.qmd
+        text: Resources
+
 
 format:
   html:
     theme: cosmo
-    toc: true
-
+    page-layout: full
+    css: styles.css
+    include-in-header:
+      - include-fonts.html
+    anchor-sections: false
 
 

@@ -1,0 +1,193 @@
+/* === HEADINGS: Highlight only ###, color depends on page === */
+
+h1, h2, h4, h5, h6 {
+  font-family: "Google Sans Code", serif;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+/* Default highlight style for ### */
+h3 {
+  font-family: "Google Sans Code", serif;
+  font-weight: 700;
+  color: #000;
+  display: inline-block;
+  padding: 0 4px;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+  background: linear-gradient(180deg, transparent 60%, #fff6a2 60%); /* pastel yellow */
+}
+
+/* Balanced heading sizes */
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; }
+
+
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar-brand, .nav-link {
+  font-family: "Google Sans Code", serif;
+  color: #040404 !important; 
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #000000 !important;
+}
+
+/* LINKS */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* TITLES */
+h1.title {
+  font-size: 2.2em;
+  color: #000000;
+  font-family: "Google Sans Code", serif;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.8em;
+}
+
+/* LISTS */
+ul, ol {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* FOOTER */
+footer {
+  background-color: #ffffff;
+  color: #b03060;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid #eee;
+}
+
+/* === PROFILE GRID AND CARDS === */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.profile-card {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.profile-card h2 {
+  font-family: "Google Sans Code", serif;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #000;
+  line-height: 1.2;
+  word-break: break-word;     /* allows long names to wrap nicely */
+  overflow-wrap: break-word;  /* ensures clean wrapping */
+  white-space: normal;        /* prevents overflow on long words */
+  margin-bottom: 6px;
+}
+
+
+.profile-card .affiliation {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.profile-card .bio {
+  font-size: 0.94em;
+  color: #333;
+  margin: 0 auto 10px auto;
+}
+
+.profile-card .social a {
+  color: #b03060;
+  text-decoration: none;
+  font-weight: 600;
+}
+.profile-card .social a:hover {
+  color: #8a1f4d;
+  text-decoration: underline;
+}
+
+.about-img-right {
+  float: right;
+  margin: 0 0 15px 25px;
+  width: 160px;
+  height: 160px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.about-img-left {
+  float: left;
+  margin: 0 25px 15px 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Ensure text wraps nicely */
+.about-img-right + p,
+.about-img-left + p {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .about-img-right,
+  .about-img-left {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* Hero section styling */
+#hero-intro {
+  position: relative;
+  z-index: 100;
+}
+
+#hero-intro h1 {
+  color: #000;
+}
+
+/* Once user scrolls, hide hero */
+body.scrolled #hero-intro {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}

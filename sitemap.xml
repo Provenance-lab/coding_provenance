@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/about.html</loc>
-    <lastmod>2025-11-05T19:22:25.330Z</lastmod>
+    <loc>https://Provenance-lab.github.io/coding_provenance/resources.html</loc>
+    <lastmod>2025-11-09T12:52:01.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/datavisualization.html</loc>
+    <lastmod>2025-11-09T13:07:24.265Z</lastmod>
   </url>
   <url>
     <loc>https://Provenance-lab.github.io/coding_provenance/index.html</loc>
-    <lastmod>2025-11-05T19:25:37.257Z</lastmod>
+    <lastmod>2025-11-09T13:34:41.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/python.html</loc>
+    <lastmod>2025-11-09T13:07:38.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/dataanalysis.html</loc>
+    <lastmod>2025-11-09T13:07:06.572Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/datamodels.html</loc>
+    <lastmod>2025-11-09T13:07:13.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/nlp.html</loc>
+    <lastmod>2025-11-09T13:07:28.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/about.html</loc>
+    <lastmod>2025-11-09T13:23:54.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/ocr.html</loc>
+    <lastmod>2025-11-09T13:07:32.833Z</lastmod>
   </url>
 </urlset>

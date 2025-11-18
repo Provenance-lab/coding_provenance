@@ -12,3 +12,11 @@ page-layout: full
 ### Hands-on Activity
 
 ### Materials 
+
+---
+
+<div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
+© 2025 Coding Provenance Workshop — Licensed under a 
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.  
+Reuse is encouraged — we happily promote changes of custody. Just be sure to write a good provenance record and **cite this workshop**.
+</div>

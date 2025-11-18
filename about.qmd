@@ -21,28 +21,24 @@ Our goal with this workshop is to provide tools to researchers and practitioners
   <img src="images/Barbara.jpeg" alt="Bárbara Romero Ferrón" class="profile-photo">
   <h2>Bárbara Romero Ferrón</h2>
   <p class="affiliation">Provenance Lab, Leuphana University of Lüneburg</p>
-  <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis orci non libero consequat, in tincidunt enim ultricies.</p>
 </div>
 
 <div class="profile-card">
   <img src="images/Lynn.jpeg" alt="Lynn Rother" class="profile-photo">
   <h2>Lynn Rother</h2>
   <p class="affiliation">Provenance Lab, Leuphana University of Lüneburg</p>
-  <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac sem et metus elementum gravida.</p>
 </div>
 
 <div class="profile-card">
   <img src="images/Giulia.jpeg" alt="Giulia Taurino" class="profile-photo">
   <h2>Giulia Taurino</h2>
-  <p class="affiliation">Getty Research Institute</p>
-  <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor lorem ac posuere vehicula.</p>
+  <p class="affiliation">Getty Provenance Index, Getty Research Institute</p>
 </div>
 
 <div class="profile-card">
   <img src="images/Sandra.jpeg" alt="Sandra van Ginhoven" class="profile-photo">
   <h2>Sandra van Ginhoven</h2>
-  <p class="affiliation">Getty Provenance Index</p>
-  <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a semper ex. Sed fermentum urna non tincidunt consectetur.</p>
+  <p class="affiliation">Getty Provenance Index, Getty Research Institute</p>
   </p>
 </div>
 
@@ -52,32 +48,58 @@ Our goal with this workshop is to provide tools to researchers and practitioners
 
 ### Other Instructors & Organizers
 
-##### Fabio Mariani
-![](images/Fabio.jpeg){.about-img-right}
+<div class="profile-grid">
 
-**Affiliation:** University of Augsburg  
-Fabio is a Research Associate at the University of Augsburg and a PhD candidate at Leuphana University Lüneburg on "Vague, Incomplete, Subjective, and Uncertain Information in Digital History." He is also an affiliated researcher at the Provenance Lab. From 2020 to 2024, he was a Research Associate at Leuphana University Lüneburg . He holds a Master's degree in Digital Humanities from the University of Bologna (2020) and a Bachelor's degree in History. During his studies, he participated in several research projects involving Semantic Web technologies at the Digital Humanities Advanced Research Centre (DH.arc) and OpenCitations.
+<div class="profile-card">
+  <img src="images/Max.jpg" alt="Max Koss" class="profile-photo">
+  <h2>Max Koss</h2>
+  <p class="affiliation">Provenance Lab, Leuphana University of Lüneburg</p>
+</div>
 
+<div class="profile-card">
+  <img src="images/Fabio.jpeg" alt="Fabio Mariani" class="profile-photo">
+  <h2>Fabio Marianir</h2>
+  <p class="affiliation">University of Augsburg</p>
+</div>
+</div>
 
----
+### Support Team
 
-##### Max Koss
-![](images/Max.jpg){.about-img-left}
+<div class="profile-grid">
+<div class="profile-card">
+  <img src="images/coco.jpeg" alt="Coco Amy Rufer" class="profile-photo">
+  <h2>Coco Rufer</h2>
+  <p class="affiliation">Provenance Lab, Leuphana University of Lüneburg</p>
+</div>
 
-**Affiliation:** Provenance Lab, Leuphana University of Lüneburg  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed nibh ut nisl convallis elementum.
+<div class="profile-card">
+  <img src="images/Katharina.jpeg" alt="Katharina Hilgert" class="profile-photo">
+  <h2>Katharina Hilgert</h2>
+  <p class="affiliation">Provenance Lab, Leuphana University of Lüneburg</p>
+  </p>
+</div>
 
----
+<div class="profile-card">
+  <img src="images/Juliane.jpeg" alt="Juliane Hensel" class="profile-photo">
+  <h2>Juliane Hensel</h2>
+  <p class="affiliation">Provenance Lab, Leuphana University of Lüneburg</p>
+  </p>
+</div>
 
-- Coco Amy Rufer, Research Assistant at the Provenance Lab
-- Katharina Hilgert, Student Assistant at the Provenance Lab
-- Juliane Hensel, Student Assistant at the Provenance Lab
-- Julia Knapmeyer, Student Assistant at the Provenance Lab
+<div class="profile-card">
+  <img src="images/Julia.jpeg" alt="Julia Knapmeyer" class="profile-photo">
+  <h2>Julia Knapmeyer</h2>
+  <p class="affiliation">Provenance Lab, Leuphana University of Lüneburg</p>
+  </p>
+</div>
+
+</div>
 
 ---
 
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
-© 2025 Coding Provenance Workshop — Licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.   
-You are free to reuse and adapt the materials, provided you **cite this workshop**.
+© 2025 Coding Provenance Workshop — Licensed under a 
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.  
+Reuse is encouraged — we happily promote changes of custody. Just be sure to write a good provenance record and **cite this workshop**.
 </div>
 

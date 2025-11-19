@@ -46,7 +46,7 @@ Our goal with this workshop is to provide tools to researchers and practitioners
 
 ---
 
-### Other Instructors & Organizers
+### Other Instructors & Organization Team
 
 <div class="profile-grid">
 
@@ -58,12 +58,10 @@ Our goal with this workshop is to provide tools to researchers and practitioners
 
 <div class="profile-card">
   <img src="images/Fabio.jpeg" alt="Fabio Mariani" class="profile-photo">
-  <h2>Fabio Marianir</h2>
+  <h2>Fabio Mariani</h2>
   <p class="affiliation">University of Augsburg</p>
 </div>
 </div>
-
-### Support Team
 
 <div class="profile-grid">
 <div class="profile-card">

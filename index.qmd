@@ -25,71 +25,71 @@ This workshop explores the emerging field of **computational provenance research
 
 ### Modules
 
-- OCR  
-- Data Models
-- Python Language  
-- From Text to Data
-- Data Analysis  
-- Data Visualization  
+- Optical Character Recognition
+- Knowledge Design. Data Models, Ontologies & Controlled Vocabularies
+- Learning How to Code 
+- Text to Tabular Data
+- Data Preprocessing, Analysis, and a New World of Research Questions  
+- Information Visualization Session  
 - Resources
 
 
 ### December Schedule
 
-::: {raw=true}
+---
 
-<table style="width:100%; border-collapse:separate; border-spacing:15px; text-align:left;">
-  <tr>
+::: {class="schedule-grid-table"}
 
-    <!-- Day 1 -->
-    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
-      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 1 – Thursday, December 18</p>
-      <ul>
-        <li><strong>15:30–16:30</strong> – Participant registration and reception</li>
-        <li><strong>16:00–17:00</strong> – Opening Panel <em>(Sandra, Lynn, Giulia, Bárbara)</em>, moderated by Max Koss</li>
-        <li><strong>17:00–18:00</strong> – Drinks, soup, and wraps</li>
-        <li><strong>18:30–open end</strong> – Museum Lüneburg & drinks</li>
-      </ul>
-    </td>
+<div class="schedule-column">
+<h3>Day 1 · Thursday 18 December</h3>
 
-    <!-- Day 2 -->
-    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
-      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 2 – Friday, December 19</p>
-      <ul>
-        <li><strong>09:00</strong> – Knowledge Design: Data Models, Ontologies & Controlled Vocabularies</li>
-        <li><strong>11:00</strong> – Learning How to Code</li>
-        <li><strong>13:00</strong> – Lunch Break @ Klippo</li>
-        <li><strong>14:15</strong> – Learning How to Code / Text to Tabular Data</li>
-        <li><strong>16:00</strong> – Text to Tabular Data</li>
-        <li><strong>17:30</strong> – Salz Museum</li>
-        <li><strong>20:15</strong> – Dinner @ Frappé</li>
-      </ul>
-    </td>
+| Time | Session |
+|:----:|:--------|
+| **15 : 30 – 16 : 00** | Participant registration and reception<br><em>TBD </em> |
+| **16 : 00 – 17 : 00** | Opening Panel (Sandra, Lynn, Giulia, Bárbara) moderated by Max Koss  |
+| **17 : 00 – 18 : 00** | Drinks, Soup and Wraps |
+| **18 : 30 – Open end** | Museum Lüneburg & Drinks |
 
-    <!-- Day 3 -->
-    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
-      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 3 – Saturday, December 20</p>
-      <ul>
-        <li><strong>09:30</strong> – Data Analysis / New Research Questions</li>
-        <li><strong>13:00</strong> – Lunch Break @ Klippo</li>
-        <li><strong>14:00</strong> – Network Analysis</li>
-        <li><strong>16:00</strong> – Information visualisation session</li>
-        <li><strong>18:30</strong> – Christmas Market at XY</li>
-        <li><strong>20:15</strong> – Dinner @ Zweilieben Pizzeria</li>
-      </ul>
-    </td>
+</div>
 
-    <!-- Day 4 -->
-    <td style="background-color:#f7f7f7; vertical-align:top; padding:20px; border-radius:12px; width:25%;">
-      <p style="font-weight:bold; font-size:0.95em; margin-top:0; margin-bottom:8px;">Day 4 – Sunday, December 21</p>
-      <ul>
-        <li><strong>10:00</strong> – Closing Panel of Participants</li>
-        <li><strong>13:00</strong> – Wrap-up & goodbye</li>
-      </ul>
-    </td>
+<div class="schedule-column">
+<h3>Day 2 · Friday 19 December</h3>
 
-  </tr>
-</table>
+| Time | Session |
+|:----:|:--------|
+| **09 : 00 – 11 : 00** | Knowledge Design · Data Models, Ontologies & Controlled Vocabularies |
+| **11 : 00 – 13 : 00** | Learning How to Code |
+| **13 : 00 – 14 : 00** | Lunch Break @ Klippo |
+| **14 : 00 – 15 : 00** | Learning How to Code / Text to Tabular Data |
+| **15 : 00 – 17 : 00** | Text to Tabular Data |
+| **17 : 30 – 19 : 30** | Salz Museum |
+| **20 : 15 – Open end** | Dinner @ Frappé |
+
+</div>
+
+<div class="schedule-column">
+<h3>Day 3 · Saturday 20 December</h3>
+
+| Time | Session |
+|:----:|:--------|
+| **09 : 00 – 13 : 00** | Data Analysis / New Research Questions |
+| **13 : 00 – 14 : 00** | Lunch Break @ Klippo |
+| **14 : 00 – 16 : 00** | Network Analysis |
+| **16 : 00 – 17 : 30** | Information Visualisation Session |
+| **18 : 30 – 20 : 00** | Christmas Market at XY |
+| **20 : 15 – Open end** | Dinner @ Zweilieben Pizzeria |
+
+</div>
+
+<div class="schedule-column">
+<h3>Day 4 · Sunday 21 December</h3>
+
+| Time | Session |
+|:----:|:--------|
+| **10 : 00** | Closing Panel of Participants moderated by LR / SvG |
+| **13 : 00** | End of Workshop |
+
+</div>
 
 :::
 

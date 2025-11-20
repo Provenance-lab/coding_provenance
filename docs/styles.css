@@ -1,0 +1,271 @@
+/* === HEADINGS: Highlight only ###, color depends on page === */
+
+h1, h2, h4, h5, h6 {
+  font-family: "Google Sans Code", serif;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+/* Default highlight style for ### */
+h3 {
+  font-family: "Google Sans Code", serif;
+  font-weight: 700;
+  color: #000;
+  display: inline-block;
+  padding: 0 4px;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+  background: linear-gradient(180deg, transparent 60%, #fff6a2 60%); /* pastel yellow */
+}
+
+/* Balanced heading sizes */
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; }
+
+
+
+/* === NAVBAR ITEM STYLING & HIGHLIGHT === */
+
+/* Add more space between nav links */
+.navbar-nav .nav-link {
+  margin: 0 18px; /* increase spacing */
+  padding-bottom: 6px; /* space for underline */
+  position: relative;
+  font-family: "Google Sans Code", serif; /* matches your title font */
+  font-weight: 600;
+  color: #000000; /* raspberry tone */
+}
+
+/* Yellow underline highlight on hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff6a2; /* pastel yellow highlight */
+  transition: width 0.3s ease;
+}
+
+/* When hovering, show underline */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+  width: 100%;
+}
+
+/* Keep color stable on hover */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Highlight the active page link */
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Optional: make the navbar background white with subtle shadow */
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* LINKS */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* TITLES */
+h1.title {
+  font-size: 2.2em;
+  color: #000000;
+  font-family: "Google Sans Code", serif;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.8em;
+}
+
+/* LISTS */
+ul, ol {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* FOOTER */
+footer {
+  background-color: #ffffff;
+  color: #b03060;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid #eee;
+}
+
+/* === CLEAN GRID LAYOUT (no boxes, just alignment) === */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px 30px;
+  margin: 40px 0;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Remove background/border from cards entirely */
+.profile-card {
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  padding: 0;
+}
+
+/* Keep the profile photos nice and consistent */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Name styling */
+.profile-card h2 {
+  font-family: "Google Sans Code", serif;
+  font-weight: 700;
+  color: #000;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+/* Affiliation styling */
+.profile-card .affiliation {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* Add subtle hover effect only to photo */
+.profile-card:hover .profile-photo {
+  transform: scale(1.03);
+  transition: transform 0.25s ease;
+}
+
+/* Ensure text wraps nicely */
+.about-img-right + p,
+.about-img-left + p {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .about-img-right,
+  .about-img-left {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* Hero section styling */
+#hero-intro {
+  position: relative;
+  z-index: 100;
+}
+
+#hero-intro h1 {
+  color: #000;
+}
+
+/* Once user scrolls, hide hero */
+body.scrolled #hero-intro {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+/* === 2x2 WORKSHOP SCHEDULE GRID === */
+
+.schedule-grid-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;       /* two columns */
+  grid-template-rows: auto auto;        /* two rows */
+  gap: 35px 40px;                       /* spacing between items */
+  margin: 40px 0;
+  justify-items: stretch;
+  align-items: start;
+}
+
+/* individual columns (days) */
+.schedule-column {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  padding: 18px 22px;
+}
+
+/* heading style */
+.schedule-column h3 {
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: #000;
+  margin-bottom: 0.7em;
+  border-bottom: 2px solid #f2f2f2;
+  padding-bottom: 0.3em;
+}
+
+/* table styling */
+.schedule-column table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Helvetica", sans-serif;
+  font-size: 0.88em;
+}
+
+.schedule-column th,
+.schedule-column td {
+  border-bottom: 1px solid #eee;
+  padding: 0.35em 0.5em;
+  vertical-align: top;
+}
+
+.schedule-column th {
+  width: 7rem;
+  text-align: center;
+  color: #b03060; /* raspberry */
+}
+
+.schedule-column td {
+  text-align: left;
+  color: #333;
+}
+
+.schedule-column em {
+  color: #666;
+  font-size: 0.85em;
+}
+
+/* responsive: stack vertically on narrow screens */
+@media (max-width: 820px) {
+  .schedule-grid-table {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+}
+

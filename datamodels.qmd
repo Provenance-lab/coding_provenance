@@ -5,13 +5,60 @@ page-layout: full
 ---
 ### Schema
 
+- What is a dataset?
+- Recipient of knowledge: relational databases / graph databases  
+- Epistemological questions: data models & ontologies  
+- Crafting data  
+- Connecting our data to the world: controlled vocabularies  
+- Data formats: CSV, JSON, Linked Open Data  
+- Share it!  
+- Current challenges: collection management systems  
+
 ### Slides
 
-### Readings
+::: {.slides-preview}
 
-### Hands-on Activity
+<iframe 
+  src="https://docs.google.com/presentation/d/1sChusNS3DpcMsS9p-iI7tKh4ZTAcn0Pwl1_D5BXsr6w/embed?start=false&loop=false&delayms=3000" 
+  frameborder="0" 
+  width="960" 
+  height="569" 
+  allowfullscreen="true" 
+  mozallowfullscreen="true" 
+  webkitallowfullscreen="true">
+</iframe>
 
-### Materials 
+:::
+
+### Resources
+
+- *Data Feminism* — Catherine D’Ignazio & Lauren F. Klein (2023). MIT Press.  
+  Open access: <https://data-feminism.mitpress.mit.edu/>
+
+- CARE Principles for Indigenous Data Governance — Global Indigenous Data Alliance (2019).  
+  <https://www.gida-global.org/care>
+
+- “Data Epistemologies, the Coloniality of Power, and Resistance” — P. Ricaurte (2019). *Television & New Media*, 20(4), 350–365.  
+  <https://doi.org/10.1177/1527476419831640>
+
+- Linked Art — Linked Art Community.  
+  <https://linked.art/>
+
+- CIDOC-CRM, Version 7.3 — CIDOC CRM Special Interest Group.  
+  <https://cidoc-crm.org/Version/version-7.3>
+
+- “The FAIR Guiding Principles for scientific data management and stewardship” — Mark D. Wilkinson et al. (2016). *Scientific Data*, 3, 160018.  
+  <https://doi.org/10.1038/sdata.2016.18>
+
+- Getty Vocabularies (AAT, ULAN, TGN) — Getty Research Institute.  
+  <https://www.getty.edu/research/tools/vocabularies/>
+
+- Wikidata: a free and open knowledge base — Wikidata Community.  
+  <https://www.wikidata.org/>
+
+- The Virtual International Authority File (VIAF).  
+  <https://viaf.org/en>
+
 
 ---
 

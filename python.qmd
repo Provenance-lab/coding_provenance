@@ -4,14 +4,51 @@ toc: false
 page-layout: full
 ---
 ### Schema
+- What is Python? 
+- Understanding Python as a language 
+- Why generative AI is helpful for coding purposes 
+- Writing good prompts 
+- Get familiar with the environments – Google Colab 
+
+### Tools & Links
+
+- Python official website: <https://www.python.org/>
+- Python documentation: <https://docs.python.org/3/>
+- Google Colab: <https://colab.research.google.com/>
+
 
 ### Slides
 
-### Readings
+::: {.slides-preview}
 
-### Hands-on Activity
+<iframe 
+  src="https://docs.google.com/presentation/d/1Wl3yxneY-EuMd3VtQJj1MiZpPhXpEfXh8NF8ixP5yi8/embed?start=false&loop=false&delayms=3000" 
+  frameborder="0" 
+  width="960" 
+  height="569" 
+  allowfullscreen="true" 
+  mozallowfullscreen="true" 
+  webkitallowfullscreen="true">
+</iframe>
 
-### Materials 
+:::
+
+### Resources
+
+- Karsdorp, F., Kestemont, M., & Riddell, A. (2021). *Humanities Data Analysis: Case Studies with Python*. Princeton University Press.  
+  <https://www.humanitiesdataanalysis.org/>
+
+- Karsdorp, F. *Python Programming for the Humanities*.  
+  <https://www.karsdorp.io/python-course/>
+
+- Walsh, Melanie (2021). *Intro to Cultural Analytics*.  
+  <https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html>
+
+- *Programming Historian*.  
+  <https://programminghistorian.org/>
+
+- Poirier, Lindsay (2020). “Ethnographies of Datasets: Teaching Critical Data Analysis through R Notebooks”.  
+  <https://shorturl.at/lAUgn>
 
 ---
 

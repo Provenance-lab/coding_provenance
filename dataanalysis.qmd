@@ -4,14 +4,88 @@ toc: false
 page-layout: full
 ---
 ### Schema
+- I have messy data, now what? – Data preprocessing  
+- The magics and wonders of OpenRefine  
+- Let’s get to the analysis  
+    - Basics of descriptive statistics  
+- Data visualization principles and exploratory plots  
+- Most importantly: what about your research questions?  
 
 ### Slides
 
-### Readings
+::: {.slides-preview}
 
-### Hands-on Activity
+<iframe 
+  src="https://docs.google.com/presentation/d/1AI2Mt24jeB1wlLo2QBFjXSsnkZKt0YoqQkpEK312dv4/embed?start=false&loop=false&delayms=3000" 
+  frameborder="0" 
+  width="960" 
+  height="569" 
+  allowfullscreen="true" 
+  mozallowfullscreen="true" 
+  webkitallowfullscreen="true">
+</iframe>
 
-### Materials 
+:::
+
+### Resources
+
+- Dataviz Project.  
+  <https://datavizproject.com/>
+
+- Mariani, F., Koss, M., & Rother, L. (2024). “People Information in Provenance Data: Biographical Entity Linking with Wikidata and ULAN.” *Život Umjetnosti: Časopis o Modernoj i Suvremenoj Umjetnosti i Arhitekturi*, 114(1), 148–161.  
+  <https://doi.org/10.31664/zu.2024.114.07>
+
+- “Creating a Data Cleaning Workflow.”  
+  <https://cghlewis.com/blog/data_clean_02/>
+
+- Python Graph Gallery.  
+  <https://python-graph-gallery.com/>
+
+---
+
+# Network Analysis
+
+### Schema
+- A Networked World 
+- What is a Network 
+- Network Syntax and Ontology 
+- Visualizing is not enough: Centrality Measures & Community Detection 
+- Intro to Gephi
+
+### Slides
+
+::: {.slides-preview}
+
+<iframe 
+  src="https://docs.google.com/presentation/d/1XfOZPYMBl-zdoC4wv0DwBqhAhy7Kp4IQCu6MD_3R-7o/embed?start=false&loop=false&delayms=3000" 
+  frameborder="0" 
+  width="960" 
+  height="569" 
+  allowfullscreen="true" 
+  mozallowfullscreen="true" 
+  webkitallowfullscreen="true">
+</iframe>
+
+:::
+
+### Resources
+
+- *Visualizing Historical Networks*.  
+  <https://histecon.fas.harvard.edu/visualizing/>
+
+- Cosmograph.  
+  <https://cosmograph.app/>
+
+- *Network Science* (online book).  
+  <http://networksciencebook.com/>
+
+- Fraiberger, S. P., Sinatra, R., Resch, M., Riedl, C., & Barabási, A.-L. (2018). “Quantifying Reputation and Success in Art.” *Science*, 362(6416), 825–829.  
+  <https://doi.org/10.1126/science.aau7224>
+
+- Huemer, C. (2019). “The Provenance of Provenances.” In Jane C. Milosch & Nick Pearce (eds.), *Collecting & Provenance: A Multidisciplinary Approach*. Rowman & Littlefield.  
+  <https://www.academia.edu/43252971/The_Provenance_of_Provenances>
+
+- Lincoln, M. D. (2020). “Tangled Metaphors: Network Thinking and Network Analysis in the History of Art.” In *The Routledge Companion to Digital Humanities and Art History*. Routledge.
 
 ---
 

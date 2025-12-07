@@ -13,25 +13,16 @@ page-layout: full
 
 This workshop explores the emerging field of **computational provenance research**, bringing together scholars, curators, and data scientists to discuss digital approaches to provenance, data modeling, and computational analysis.
 
-
-### What You Need
-
-- **You need to bring your own laptop**
-- A **Google account**, as we’ll be using **Google Colab** for hands-on sessions.  
-- If you prefer, you may use your own local environment (e.g., **Visual Studio Code** or **Jupyter Notebooks**).  
-- We will be coding in **Python** throughout the workshop.
-
-
-
 ### Modules
 
-- Optical Character Recognition
-- Knowledge Design. Data Models, Ontologies & Controlled Vocabularies
-- Learning How to Code 
-- Text to Tabular Data
-- Data Preprocessing, Analysis, and a New World of Research Questions  
-- Information Visualization Session  
-- Resources
+- **Optical Character Recognition**
+- **Knowledge Design. Data Models, Ontologies & Controlled Vocabularies**
+- **Learning How to Code** 
+- **From Raw Text to Structured Data**
+- **Data Preprocessing, Analysis, and a New World of Research Questions**
+    - **Network Analysis**  
+- **Data Viusalization**
+- **Bibliography & other Resources**
 
 
 ### December Schedule
@@ -93,7 +84,6 @@ This workshop explores the emerging field of **computational provenance research
 
 :::
 
----
 
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 © 2025 Coding Provenance Workshop — Licensed under a 

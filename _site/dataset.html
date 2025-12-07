@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Preprocessing, Analysis, and a New World of Research Questions – Computational Provenance</title>
+<title>Sample Provenance Datasets – Computational Provenance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dataset.html"> 
+    <a class="nav-link active" href="./dataset.html" aria-current="page"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
   <li class="nav-item">
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Text</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./dataanalysis.html" aria-current="page"> 
+    <a class="nav-link" href="./dataanalysis.html"> 
 <span class="menu-text">Analysis</span></a>
   </li>  
   <li class="nav-item">
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Preprocessing, Analysis, and a New World of Research Questions</h1>
+<h1 class="title">Sample Provenance Datasets</h1>
 </div>
 
 
@@ -166,78 +166,213 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="schema" class="level3">
-<h3 data-anchor-id="schema">Schema</h3>
-<ul>
-<li>I have messy data, now what? – Data preprocessing<br>
-</li>
-<li>The magics and wonders of OpenRefine<br>
-</li>
-<li>Let’s get to the analysis
-<ul>
-<li>Basics of descriptive statistics<br>
-</li>
-</ul></li>
-<li>Data visualization principles and exploratory plots<br>
-</li>
-<li>Most importantly: what about your research questions?</li>
-</ul>
-</section>
-<section id="slides" class="level3">
-<h3 data-anchor-id="slides">Slides</h3>
-<div class="slides-preview">
-<iframe src="https://docs.google.com/presentation/d/1AI2Mt24jeB1wlLo2QBFjXSsnkZKt0YoqQkpEK312dv4/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
-</iframe>
-</div>
-</section>
-<section id="resources" class="level3">
-<h3 data-anchor-id="resources">Resources</h3>
-<ul>
-<li><p>Dataviz Project.<br>
-<a href="https://datavizproject.com/" class="uri">https://datavizproject.com/</a></p></li>
-<li><p>Mariani, F., Koss, M., &amp; Rother, L. (2024). “People Information in Provenance Data: Biographical Entity Linking with Wikidata and ULAN.” <em>Život Umjetnosti: Časopis o Modernoj i Suvremenoj Umjetnosti i Arhitekturi</em>, 114(1), 148–161.<br>
-<a href="https://doi.org/10.31664/zu.2024.114.07" class="uri">https://doi.org/10.31664/zu.2024.114.07</a></p></li>
-<li><p>“Creating a Data Cleaning Workflow.”<br>
-<a href="https://cghlewis.com/blog/data_clean_02/" class="uri">https://cghlewis.com/blog/data_clean_02/</a></p></li>
-<li><p>Python Graph Gallery.<br>
-<a href="https://python-graph-gallery.com/" class="uri">https://python-graph-gallery.com/</a></p></li>
-</ul>
+<section id="knoedler-stockbooks" class="level3">
+<h3 data-anchor-id="knoedler-stockbooks">Knoedler Stockbooks</h3>
 <hr>
 </section>
-<section id="network-analysis" class="level1">
-<h1>Network Analysis</h1>
-<section id="schema-1" class="level3">
-<h3 data-anchor-id="schema-1">Schema</h3>
-<ul>
-<li>A Networked World</li>
-<li>What is a Network</li>
-<li>Network Syntax and Ontology</li>
-<li>Visualizing is not enough: Centrality Measures &amp; Community Detection</li>
-<li>Intro to Gephi</li>
-</ul>
+<section id="art-institute-of-chicago" class="level3">
+<h3 data-anchor-id="art-institute-of-chicago">Art Institute of Chicago</h3>
+<section id="about-the-dataset" class="level4">
+<h4 data-anchor-id="about-the-dataset">About the Dataset</h4>
+<p>This dataset compiles provenance records from the Art Institute of Chicago’s online collection database.<br>
+It includes artworks such as paintings, sculptures, prints, drawings, and decorative arts.</p>
+<p>In the original API, provenance information appears as <em>free text</em>. For the purposes of this workshop, this material has been transformed into <strong>structured provenance events</strong>, where each event includes one or more involved parties (people, families, institutions) and other semantic components. The information of all provenance statements remains exactly as provided by the Art Institute of Chicago — no corrections, additions, or interpretative changes have been introduced.</p>
+<p><strong><a href="https://api.artic.edu/docs/#introduction">API — Art Institute of Chicago</a></strong></p>
+<p><strong><a href="https://drive.google.com/file/d/13T2MtC6ceOg7uc209HN0f-smtKIcoc7q/view?usp=drive_link">Art Institute of Chicago Provenance Dataset</a></strong></p>
+<hr>
 </section>
-<section id="slides-1" class="level3">
-<h3 data-anchor-id="slides-1">Slides</h3>
-<div class="slides-preview">
-<iframe src="https://docs.google.com/presentation/d/1XfOZPYMBl-zdoC4wv0DwBqhAhy7Kp4IQCu6MD_3R-7o/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
-</iframe>
+<section id="documentation-of-variables" class="level4">
+<h4 data-anchor-id="documentation-of-variables">Documentation of Variables</h4>
+<p><em>(click to expand each section)</em></p>
+<div class="callout callout-style-default callout-note callout-titled" title="1. Artwork-Level Variables">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</section>
-<section id="resources-1" class="level3">
-<h3 data-anchor-id="resources-1">Resources</h3>
-<ul>
-<li><p><em>Visualizing Historical Networks</em>.<br>
-<a href="https://histecon.fas.harvard.edu/visualizing/" class="uri">https://histecon.fas.harvard.edu/visualizing/</a></p></li>
-<li><p>Cosmograph.<br>
-<a href="https://cosmograph.app/" class="uri">https://cosmograph.app/</a></p></li>
-<li><p><em>Network Science</em> (online book).<br>
-<a href="http://networksciencebook.com/" class="uri">http://networksciencebook.com/</a></p></li>
-<li><p>Fraiberger, S. P., Sinatra, R., Resch, M., Riedl, C., &amp; Barabási, A.-L. (2018). “Quantifying Reputation and Success in Art.” <em>Science</em>, 362(6416), 825–829.<br>
-<a href="https://doi.org/10.1126/science.aau7224" class="uri">https://doi.org/10.1126/science.aau7224</a></p></li>
-<li><p>Huemer, C. (2019). “The Provenance of Provenances.” In Jane C. Milosch &amp; Nick Pearce (eds.), <em>Collecting &amp; Provenance: A Multidisciplinary Approach</em>. Rowman &amp; Littlefield.<br>
-<a href="https://www.academia.edu/43252971/The_Provenance_of_Provenances" class="uri">https://www.academia.edu/43252971/The_Provenance_of_Provenances</a></p></li>
-<li><p>Lincoln, M. D. (2020). “Tangled Metaphors: Network Thinking and Network Analysis in the History of Art.” In <em>The Routledge Companion to Digital Humanities and Art History</em>. Routledge.</p></li>
-</ul>
+<div class="callout-title-container flex-fill">
+Artwork-Level Variables
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>These fields sit at the top level of each JSON object.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 21%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>id</strong></td>
+<td>Integer</td>
+<td>Internal numeric identifier for each artwork (unique).</td>
+</tr>
+<tr class="even">
+<td><strong>title</strong></td>
+<td>String</td>
+<td>Public title of the work.</td>
+</tr>
+<tr class="odd">
+<td><strong>alt_titles</strong></td>
+<td>String or array, nullable</td>
+<td>Alternative titles when available.</td>
+</tr>
+<tr class="even">
+<td><strong>main_reference_number</strong></td>
+<td>String</td>
+<td>Accession/inventory number.</td>
+</tr>
+<tr class="odd">
+<td><strong>date_start</strong></td>
+<td>Integer</td>
+<td>Earliest possible creation year (BCE negative, CE positive).</td>
+</tr>
+<tr class="even">
+<td><strong>date_end</strong></td>
+<td>Integer</td>
+<td>Latest possible creation year.</td>
+</tr>
+<tr class="odd">
+<td><strong>artist_display</strong></td>
+<td>String</td>
+<td>Display text describing maker/culture/origin.</td>
+</tr>
+<tr class="even">
+<td><strong>place_of_origin</strong></td>
+<td>String</td>
+<td>Normalized place name extracted from the record.</td>
+</tr>
+<tr class="odd">
+<td><strong>dimensions</strong></td>
+<td>String</td>
+<td>Free-text measurements.</td>
+</tr>
+<tr class="even">
+<td><strong>medium_display</strong></td>
+<td>String</td>
+<td>Materials and techniques.</td>
+</tr>
+<tr class="odd">
+<td><strong>inscriptions</strong></td>
+<td>String, nullable</td>
+<td>Description or transcription of inscriptions.</td>
+</tr>
+<tr class="even">
+<td><strong>credit_line</strong></td>
+<td>String</td>
+<td>How the work entered the collection (gift, purchase, etc.).</td>
+</tr>
+<tr class="odd">
+<td><strong>provenance_text</strong></td>
+<td>String</td>
+<td>Narrative provenance as written by AIC curators.</td>
+</tr>
+<tr class="even">
+<td><strong>events_structured</strong></td>
+<td>Array</td>
+<td>Parsed provenance events derived from the narrative.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="2. Provenance Event-Level Variables">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Provenance Event-Level Variables
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Each entry in <code>events_structured</code> represents a structured provenance fragment.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 20%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>event</strong></td>
+<td>String</td>
+<td>Event identifier (e.g., “event_1”). Groups components belonging to the same ownership step.</td>
+</tr>
+<tr class="even">
+<td><strong>value</strong></td>
+<td>String</td>
+<td>Extracted fragment referring to a person, method, date, place, etc.</td>
+</tr>
+<tr class="odd">
+<td><strong>type</strong></td>
+<td>Array of strings</td>
+<td>Semantic labels defining the nature of <code>value</code>. May include:</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Person</strong> — Named individual</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Party</strong> — Any owner (person, family, institution)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Group</strong> — Collective/institutional actor</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Receiver</strong> — Party acquiring the work</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Method</strong> — How the object changed hands (“sold”, “given”)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Time</strong> — Specific dates or years</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Vagueness</strong> — Uncertain expressions (“by 1938”)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Name</strong> — Explicit name tag (overlaps with Person/Party)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 <p>© 2025 Coding Provenance Workshop — Licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.<br>
 Reuse is encouraged — we happily promote changes of custody. Just be sure to write a good provenance record and <strong>cite this workshop</strong>.</p>

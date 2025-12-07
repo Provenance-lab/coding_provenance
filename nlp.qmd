@@ -34,7 +34,7 @@ page-layout: full
 - *Text Analysis for Humanities Research (with a focus on Archaeology)*.  
   <https://github.com/alexbrandsen/Text-Analysis-for-Humanities-research?tab=readme-ov-file>
 
----
+
 
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 © 2025 Coding Provenance Workshop — Licensed under a 

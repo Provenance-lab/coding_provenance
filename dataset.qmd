@@ -3,17 +3,78 @@ title: "Sample Provenance Datasets"
 toc: false
 page-layout: full
 ---
-### Schema
+### Knoedler Stockbooks
 
-### Slides
-
-### Readings
-
-### Hands-on Activity
-
-### Materials 
 
 ---
+
+### Art Institute of Chicago
+
+#### About the Dataset
+
+This dataset compiles provenance records from the Art Institute of Chicago’s online collection database.  
+It includes artworks such as paintings, sculptures, prints, drawings, and decorative arts.
+
+In the original API, provenance information appears as *free text*. For the purposes of this workshop, this material has been transformed into **structured provenance events**, where each event includes one or more involved parties (people, families, institutions) and other semantic components. The information of all provenance statements remains exactly as provided by the Art Institute of Chicago — no corrections, additions, or interpretative changes have been introduced.
+
+**[API — Art Institute of Chicago](https://api.artic.edu/docs/#introduction)**  
+
+**[Art Institute of Chicago Provenance Dataset](https://drive.google.com/file/d/13T2MtC6ceOg7uc209HN0f-smtKIcoc7q/view?usp=drive_link)**
+
+---
+
+#### Documentation of Variables  
+*(click to expand each section)*
+
+
+::: {.callout-note collapse="true" title="1. Artwork-Level Variables"}
+
+These fields sit at the top level of each JSON object.
+
+| Variable | Type | Description |
+|---------|------|-------------|
+| **id** | Integer | Internal numeric identifier for each artwork (unique). |
+| **title** | String | Public title of the work. |
+| **alt_titles** | String or array, nullable | Alternative titles when available. |
+| **main_reference_number** | String | Accession/inventory number. |
+| **date_start** | Integer | Earliest possible creation year (BCE negative, CE positive). |
+| **date_end** | Integer | Latest possible creation year. |
+| **artist_display** | String | Display text describing maker/culture/origin. |
+| **place_of_origin** | String | Normalized place name extracted from the record. |
+| **dimensions** | String | Free-text measurements. |
+| **medium_display** | String | Materials and techniques. |
+| **inscriptions** | String, nullable | Description or transcription of inscriptions. |
+| **credit_line** | String | How the work entered the collection (gift, purchase, etc.). |
+| **provenance_text** | String | Narrative provenance as written by AIC curators. |
+| **events_structured** | Array | Parsed provenance events derived from the narrative. |
+
+:::
+
+
+
+::: {.callout-note collapse="true" title="2. Provenance Event-Level Variables"}
+
+Each entry in `events_structured` represents a structured provenance fragment.
+
+| Variable | Type | Description |
+|----------|------|-------------|
+| **event** | String | Event identifier (e.g., "event_1"). Groups components belonging to the same ownership step. |
+| **value** | String | Extracted fragment referring to a person, method, date, place, etc. |
+| **type** | Array of strings | Semantic labels defining the nature of `value`. May include: |
+| | | • **Person** — Named individual  
+| | | • **Party** — Any owner (person, family, institution)  
+| | | • **Group** — Collective/institutional actor  
+| | | • **Receiver** — Party acquiring the work  
+| | | • **Method** — How the object changed hands (“sold”, “given”)  
+| | | • **Time** — Specific dates or years  
+| | | • **Vagueness** — Uncertain expressions (“by 1938”)  
+| | | • **Name** — Explicit name tag (overlaps with Person/Party) |
+
+:::
+
+
+
+
 
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 © 2025 Coding Provenance Workshop — Licensed under a 

@@ -297,3 +297,36 @@ body.scrolled #hero-intro {
   font-weight: normal !important;
   color: #000000 !important;
 }
+
+/* === CUSTOM STYLING FOR COLLAPSIBLE CALLOUTS (BLUE + YELLOW THEME) === */
+
+.callout-note.callout {
+  border: 1px solid hsla(54, 79%, 76%, 0.634) !important;     /* soft yellow border */
+  border-radius: 12px !important;
+  background-color: #ffffff !important;     /* white content box */
+  padding-top: 0 !important;
+}
+
+/* Header area (the clickable title) */
+.callout-note.callout .callout-header {
+  background-color: hsla(54, 79%, 76%, 0.634) !important;     /* pastel yellow */
+  color: #012f4a !important;                /* dark blue text */
+  font-family: "Google Sans Code", serif !important;
+  font-weight: 700 !important;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 10px 14px !important;
+  margin: 0 !important;
+  border-bottom: 1px solid hsla(54, 79%, 76%, 0.634) !important;
+}
+
+/* Remove the default note icon */
+.callout-note.callout .callout-icon {
+  display: none !important;
+}
+
+/* Body area */
+.callout-note.callout .callout-body {
+  padding: 16px 18px !important;
+  color: #000000 !important;
+  font-family: inherit;
+}

@@ -11,6 +11,8 @@ website:
         text: Home
       - href: about.qmd
         text: About
+      - href: dataset.qmd
+        text: Datasets
       - href: ocr.qmd
         text: OCR
       - href: datamodels.qmd

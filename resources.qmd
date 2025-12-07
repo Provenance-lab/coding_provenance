@@ -2,10 +2,146 @@
 title: "Bibliography & other Resources"
 toc: false
 page-layout: full
+class: resources-page
 ---
+<div class="resources-scope">
+
+<div style="
+  background: #ffffffab;
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 1px solid #fcf8d7ff;
+  margin: 25px 0;
+">
+
+### Mandatory Readings
+
+**Rother, Lynn, Max Koss, and Fabio Mariani.** “Taking Care of History: Toward a Politics of Provenance Linked Open Data in Museums.” In *Perspectives on Data*, edited by Emily Lew Fry and Erin Canning. Art Institute of Chicago, 2022.  
+<a href="https://www.artic.edu/digital-publications/37/perspectives-on-data/25/taking-care-of-history">https://www.artic.edu/digital-publications/37/perspectives-on-data/25/taking-care-of-history</a>
+
+**Schich, Maximilian, Christian Huemer, Patryk Adamczyk, Lev Manovich, and Yang-Yu Liu.** “Network Dimensions in the Getty Provenance Index.” *arXiv* (2017).  
+<a href="https://arxiv.org/abs/1706.02804">https://arxiv.org/abs/1706.02804</a>
+
+</div>
+
+---
+
+### Getty Provenance Index Tutorials
+
+**[Introduction to the Getty Provenance Index](https://www.youtube.com/watch?v=2Z1tyMOE6IE)**  
+
+**[Artists, Collectors & Dealers in the GPI](https://www.youtube.com/watch?v=0488ZcOHEEM)**  
+
+**[Using the Getty Provenance Index Databases](https://www.youtube.com/watch?v=mftR73PxldI)**  
+
+**[Getty Provenance Index Explained: A Walkthrough](https://www.youtube.com/watch?v=RFvYS_5HrfI)**  
 
 
 ---
+
+### Bibliography
+
+**Ahnert, Ruth, and Sebastian E. Ahnert.** *Tudor Networks of Power.* Oxford University Press, 2023.  
+<a href="https://doi.org/10.1093/oso/9780198858973.001.0001">https://doi.org/10.1093/oso/9780198858973.001.0001</a>
+
+**Ahnert, Ruth, Sebastian E. Ahnert, and Catherine Nicole Coleman.** *The Network Turn.* Cambridge University Press, 2021.  
+<a href="https://doi.org/10.1017/9781108911466">https://doi.org/10.1017/9781108911466</a>
+
+**Barabási, Albert-László**, et al. “Quantifying Reputation and Success in Art.” *Science* 362, no. 6416 (2018): 825–829.  
+<a href="https://doi.org/10.1126/science.aau7224">https://doi.org/10.1126/science.aau7224</a>
+
+**Barabási, Albert-László, et al.** *Network Science.*  
+<a href="http://networksciencebook.com/">http://networksciencebook.com/</a>
+
+**Bishop, Claire.** “Against Digital Art History.” *International Journal for Digital Art History* 3 (2018).  
+<a href="https://doi.org/10.11588/dah.2018.3.49915">https://doi.org/10.11588/dah.2018.3.49915</a>
+
+**Cairo, Alberto.** *How Charts Lie: Getting Smarter About Visual Information.* W. W. Norton, 2020.
+
+**D’Ignazio, Catherine, and Lauren F. Klein.** *Data Feminism.* MIT Press, 2023.  
+<a href="https://data-feminism.mitpress.mit.edu/">https://data-feminism.mitpress.mit.edu/</a>
+
+**Drucker, Johanna.** *Graphesis: Visual Forms of Knowledge Production.* Harvard University Press, 2014.  
+<a href="https://doi.org/10.4159/9780674727558">https://doi.org/10.4159/9780674727558</a>
+
+**Huemer, Christian.** “The Provenance of Provenances.” In *Collecting & Provenance: A Multidisciplinary Approach*, edited by Jane C. Milosch and Nick Pearce. Rowman & Littlefield, 2019.  
+<a href="https://www.academia.edu/43252971/The_Provenance_of_Provenances">https://www.academia.edu/43252971/The_Provenance_of_Provenances</a>
+
+**Karsdorp, Folgert.** *Python Programming for the Humanities.*  
+<a href="https://www.karsdorp.io/python-course/">https://www.karsdorp.io/python-course/</a>
+
+**Karsdorp, Folgert, Mike Kestemont, and Allen Riddell.** *Humanities Data Analysis: Case Studies with Python.* Princeton University Press, 2021.  
+<a href="https://doi.org/10.2307/j.ctv1dxdxhf">https://doi.org/10.2307/j.ctv1dxdxhf</a>
+
+**Lincoln, Matthew D.** “Tangled Metaphors: Network Thinking and Network Analysis in the History of Art.” In *The Routledge Companion to Digital Humanities and Art History*, Routledge, 2020.
+
+**Love, Heather.** “Close but Not Deep: Literary Ethics and the Descriptive Turn.” *New Literary History* 41, no. 2 (2010): 371–391.  
+<a href="https://doi.org/10.1353/nlh.2010.0003">https://doi.org/10.1353/nlh.2010.0003</a>
+
+**Mariani, Fabio.** “Introducing VISU: Vagueness, Incompleteness, Subjectivity, and Uncertainty in Art Provenance Data.” In *Computational Methods in the Humanities 2022*, CEUR Workshop Proceedings, 3602 (2023).  
+<a href="https://ceur-ws.org/Vol-3602/">https://ceur-ws.org/Vol-3602/</a>
+
+**Mariani, Fabio, Max Koss, and Lynn Rother.** “People Information in Provenance Data: Biographical Entity Linking with Wikidata and ULAN.” *Život Umjetnosti* 114, no. 1 (2024): 148–161.  
+<a href="https://doi.org/10.31664/zu.2024.114.07">https://doi.org/10.31664/zu.2024.114.07</a>
+
+**Mariani, Fabio, Lynn Rother, and Max Koss.** “Teaching Provenance to AI: An Annotation Scheme for Museum Data.” In *AI in Museums: Reflections, Perspectives and Applications*, edited by Sonja Thiel and Johannes Bernhardt. Transcript Verlag, 2023.  
+<a href="https://doi.org/10.1515/9783839467107-014">https://doi.org/10.1515/9783839467107-014</a>
+
+**McNeill, J. R., and William H. McNeill.** *The Human Web: A Bird’s-Eye View of World History.* W. W. Norton, 2003.
+
+**Meirelles, Isabel.** *Design for Information.* Rockport Publishers, 2013.
+
+**Poirier, Lindsay.** “Ethnographies of Datasets: Teaching Critical Data Analysis Through R Notebooks.” 2020.  
+<a href="https://shorturl.at/lAUgn">https://shorturl.at/lAUgn</a>
+
+**Porras, Stephanie.** “Keeping Our Eyes Open: Visualizing Networks and Art History.” *Artl@s Bulletin* 6, no. 3 (2017).  
+<a href="https://docs.lib.purdue.edu/artlas/vol6/iss3/3">https://docs.lib.purdue.edu/artlas/vol6/iss3/3</a>
+
+**Ricaurte, Paola.** “Data Epistemologies, the Coloniality of Power, and Resistance.” *Television & New Media* 20, no. 4 (2019): 350–365.  
+<a href="https://doi.org/10.1177/1527476419831640">https://doi.org/10.1177/1527476419831640</a>
+
+**Rother, Lynn.** “Uncanny Provenance: Art History and Its Double / Unheimliche Provenienz: Kunstgeschichte und ihr Doppelgänger.” *Texte zur Kunst* 32, no. 128 (2022): 84–97.
+
+**Rother, Lynn.** “Institutionalisierte Institutionskritik: Lynn Rother über ‘Wege der Kunst’ im Museum Rietberg, Zürich, sowie ‘Zerrissene Moderne’ und ‘Der Sammler Curt Glaser’ im Kunstmuseum Basel.” *Texte zur Kunst* 33, no. 131 (2023): 214–219.
+
+**Rother, Lynn, Max Koss, and Fabio Mariani.** “Interpreting Strings, Weaving Threads: Structuring Provenance Data with AI.” In *Sammlungsforschung im Digitalen Zeitalter*, edited by Stefan Alschner and Katharina Günther. Wallstein Verlag, 2024.  
+<a href="https://doi.org/10.15499/kds-005-008">https://doi.org/10.15499/kds-005-008</a>
+
+**Shekhtman, Louis Michael, and Albert-László Barabási.** “Philanthropy in Art: Locality, Donor Retention, and Prestige.” *Scientific Reports* 13, no. 1 (2023): 12157.  
+<a href="https://doi.org/10.1038/s41598-023-38815-1">https://doi.org/10.1038/s41598-023-38815-1</a>
+
+
+---
+
+### Other Resources
+
+**[CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care)**  
+
+**[CIDOC CRM, Version 7.3](https://cidoc-crm.org/Version/version-7.3)**  
+
+**[Creating a Data Cleaning Workflow](https://cghlewis.com/blog/data_clean_02/)**  
+
+**[Dataviz Project](https://datavizproject.com/)**  
+
+**[Getty Vocabularies (AAT, ULAN, TGN)](https://www.getty.edu/research/tools/vocabularies/)**  
+
+**[Linked Art — Linked Art Community](https://linked.art/)**  
+
+**[Programming Historian](https://programminghistorian.org/)**  
+
+**[The FAIR Guiding Principles for Scientific Data Management and Stewardship](https://doi.org/10.1038/sdata.2016.18)**  
+
+**[The Virtual International Authority File (VIAF)](https://viaf.org/en)**  
+
+**[Visualizing Historical Networks](https://histecon.fas.harvard.edu/visualizing/)**  
+
+**[Voyant Tools](https://voyant-tools.org/)**  
+
+**[Wikidata: A Free and Open Knowledge Base](https://www.wikidata.org/)**  
+
+
+
+</div>
 
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 © 2025 Coding Provenance Workshop — Licensed under a 

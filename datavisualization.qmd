@@ -27,16 +27,15 @@ page-layout: full
 
 ### Resources
 
-- Drucker, J. (2014). *Graphesis: Visual Forms of Knowledge Production*. Harvard University Press.  
-
 - Cairo, A. (2020). *How Charts Lie: Getting Smarter About Visual Information* (Norton paperback edition). W. W. Norton & Company, Inc.  
+
+- Drucker, J. (2014). *Graphesis: Visual Forms of Knowledge Production*. Harvard University Press.  
 
 - Meirelles, I. (2013). *Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations* (1st edition). Rockport Publishers.  
 
 
 
 
----
 
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 © 2025 Coding Provenance Workshop — Licensed under a 

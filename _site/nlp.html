@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>From Text to Data – Computational Provenance</title>
+<title>From Raw Text to Structured Data – Computational Provenance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">From Text to Data</h1>
+<h1 class="title">From Raw Text to Structured Data</h1>
 </div>
 
 
@@ -164,18 +164,29 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="schema" class="level3">
 <h3 data-anchor-id="schema">Schema</h3>
+<ul>
+<li>Intro to Natural Language Processing (NLP)<br>
+</li>
+<li>Intro to Large Language Models (LLMs)</li>
+</ul>
 </section>
 <section id="slides" class="level3">
 <h3 data-anchor-id="slides">Slides</h3>
+<div class="slides-preview">
+<iframe src="https://docs.google.com/presentation/d/1EMUR8YxbOD_G9URr8qsw3rQGEQFIxOznTu0TC0oZvjE/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+</iframe>
+</div>
 </section>
-<section id="readings" class="level3">
-<h3 data-anchor-id="readings">Readings</h3>
-</section>
-<section id="hands-on-activity" class="level3">
-<h3 data-anchor-id="hands-on-activity">Hands-on Activity</h3>
-</section>
-<section id="materials" class="level3">
-<h3 data-anchor-id="materials">Materials</h3>
+<section id="resources" class="level3">
+<h3 data-anchor-id="resources">Resources</h3>
+<ul>
+<li><p><em>Illustrated Guide to Transformer: A component-by-component breakdown analysis</em> (2020).<br>
+<a href="https://jinglescode.github.io/2020/05/27/illustrated-guide-transformer/" class="uri">https://jinglescode.github.io/2020/05/27/illustrated-guide-transformer/</a></p></li>
+<li><p><em>The Illustrated Word2vec</em>.<br>
+<a href="https://jalammar.github.io/illustrated-word2vec/" class="uri">https://jalammar.github.io/illustrated-word2vec/</a></p></li>
+<li><p><em>Text Analysis for Humanities Research (with a focus on Archaeology)</em>.<br>
+<a href="https://github.com/alexbrandsen/Text-Analysis-for-Humanities-research?tab=readme-ov-file" class="uri">https://github.com/alexbrandsen/Text-Analysis-for-Humanities-research?tab=readme-ov-file</a></p></li>
+</ul>
 <hr>
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 <p>© 2025 Coding Provenance Workshop — Licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.<br>
@@ -251,7 +262,7 @@ Reuse is encouraged — we happily promote changes of custody. Just be sure to w
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Provenance-lab\.github\.io\/coding_provenance\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

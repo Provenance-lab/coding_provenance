@@ -101,6 +101,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link active" href="./dataset.html" aria-current="page"> 
+<span class="menu-text">Datasets</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./ocr.html"> 
 <span class="menu-text">OCR</span></a>
   </li>  
@@ -162,27 +166,220 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="schema" class="level3">
-<h3 data-anchor-id="schema">Schema</h3>
-</section>
-<section id="slides" class="level3">
-<h3 data-anchor-id="slides">Slides</h3>
-</section>
-<section id="readings" class="level3">
-<h3 data-anchor-id="readings">Readings</h3>
-</section>
-<section id="hands-on-activity" class="level3">
-<h3 data-anchor-id="hands-on-activity">Hands-on Activity</h3>
-</section>
-<section id="materials" class="level3">
-<h3 data-anchor-id="materials">Materials</h3>
+<section id="knoedler-stockbooks" class="level3">
+<h3 data-anchor-id="knoedler-stockbooks">Knoedler Stockbooks</h3>
 <hr>
+</section>
+<section id="art-institute-of-chicago" class="level3">
+<h3 data-anchor-id="art-institute-of-chicago">Art Institute of Chicago</h3>
+<section id="about-the-dataset" class="level4">
+<h4 data-anchor-id="about-the-dataset">About the Dataset</h4>
+<p>This dataset compiles provenance records from the Art Institute of Chicago’s online collection database.<br>
+It includes artworks such as paintings, sculptures, prints, drawings, and decorative arts.</p>
+<p>In the original API, provenance information appears as <em>free text</em>. For the purposes of this workshop, this material has been transformed into <strong>structured provenance events</strong>, where each event includes one or more involved parties (people, families, institutions) and other semantic components. The information of all provenance statements remains exactly as provided by the Art Institute of Chicago — no corrections, additions, or interpretative changes have been introduced.</p>
+<p><strong><a href="https://api.artic.edu/docs/#introduction">API — Art Institute of Chicago</a></strong></p>
+<p><strong><a href="https://drive.google.com/file/d/13T2MtC6ceOg7uc209HN0f-smtKIcoc7q/view?usp=drive_link">Art Institute of Chicago Provenance Dataset</a></strong></p>
+<hr>
+</section>
+<section id="documentation-of-variables" class="level4">
+<h4 data-anchor-id="documentation-of-variables">Documentation of Variables</h4>
+<p><em>(click to expand each section)</em></p>
+<div class="callout callout-style-default callout-note callout-titled" title="1. Artwork-Level Variables">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Artwork-Level Variables
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>These fields sit at the top level of each JSON object.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 21%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>id</strong></td>
+<td>Integer</td>
+<td>Internal numeric identifier for each artwork (unique).</td>
+</tr>
+<tr class="even">
+<td><strong>title</strong></td>
+<td>String</td>
+<td>Public title of the work.</td>
+</tr>
+<tr class="odd">
+<td><strong>alt_titles</strong></td>
+<td>String or array, nullable</td>
+<td>Alternative titles when available.</td>
+</tr>
+<tr class="even">
+<td><strong>main_reference_number</strong></td>
+<td>String</td>
+<td>Accession/inventory number.</td>
+</tr>
+<tr class="odd">
+<td><strong>date_start</strong></td>
+<td>Integer</td>
+<td>Earliest possible creation year (BCE negative, CE positive).</td>
+</tr>
+<tr class="even">
+<td><strong>date_end</strong></td>
+<td>Integer</td>
+<td>Latest possible creation year.</td>
+</tr>
+<tr class="odd">
+<td><strong>artist_display</strong></td>
+<td>String</td>
+<td>Display text describing maker/culture/origin.</td>
+</tr>
+<tr class="even">
+<td><strong>place_of_origin</strong></td>
+<td>String</td>
+<td>Normalized place name extracted from the record.</td>
+</tr>
+<tr class="odd">
+<td><strong>dimensions</strong></td>
+<td>String</td>
+<td>Free-text measurements.</td>
+</tr>
+<tr class="even">
+<td><strong>medium_display</strong></td>
+<td>String</td>
+<td>Materials and techniques.</td>
+</tr>
+<tr class="odd">
+<td><strong>inscriptions</strong></td>
+<td>String, nullable</td>
+<td>Description or transcription of inscriptions.</td>
+</tr>
+<tr class="even">
+<td><strong>credit_line</strong></td>
+<td>String</td>
+<td>How the work entered the collection (gift, purchase, etc.).</td>
+</tr>
+<tr class="odd">
+<td><strong>provenance_text</strong></td>
+<td>String</td>
+<td>Narrative provenance as written by AIC curators.</td>
+</tr>
+<tr class="even">
+<td><strong>events_structured</strong></td>
+<td>Array</td>
+<td>Parsed provenance events derived from the narrative.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="2. Provenance Event-Level Variables">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Provenance Event-Level Variables
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Each entry in <code>events_structured</code> represents a structured provenance fragment.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 20%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>event</strong></td>
+<td>String</td>
+<td>Event identifier (e.g., “event_1”). Groups components belonging to the same ownership step.</td>
+</tr>
+<tr class="even">
+<td><strong>value</strong></td>
+<td>String</td>
+<td>Extracted fragment referring to a person, method, date, place, etc.</td>
+</tr>
+<tr class="odd">
+<td><strong>type</strong></td>
+<td>Array of strings</td>
+<td>Semantic labels defining the nature of <code>value</code>. May include:</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Person</strong> — Named individual</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Party</strong> — Any owner (person, family, institution)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Group</strong> — Collective/institutional actor</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Receiver</strong> — Party acquiring the work</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Method</strong> — How the object changed hands (“sold”, “given”)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Time</strong> — Specific dates or years</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>• <strong>Vagueness</strong> — Uncertain expressions (“by 1938”)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>• <strong>Name</strong> — Explicit name tag (overlaps with Person/Party)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
 <p>© 2025 Coding Provenance Workshop — Licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.<br>
 Reuse is encouraged — we happily promote changes of custody. Just be sure to write a good provenance record and <strong>cite this workshop</strong>.</p>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

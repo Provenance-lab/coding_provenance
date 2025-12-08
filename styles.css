@@ -52,7 +52,7 @@ ul, ol {
 /* === LINKS & EMPHASIS === */
 
 a {
-  color: #4a86e8;          /* accent color for links */
+  color: #4a86e8;          /* light blue for clickable things */
   text-decoration: none;
   font-weight: 600;
 }
@@ -62,11 +62,17 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Bold text in accent color */
+/* Bold text in dark blue (non-links) */
 strong,
 b {
   color: #012f4a;
   font-weight: 700;
+}
+
+/* If bold text is inside a link, keep it light blue */
+a strong,
+a b {
+  color: #4a86e8;
 }
 
 /* === NAVBAR === */
@@ -274,28 +280,6 @@ body.scrolled #hero-intro {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
   }
-}
-
-/* === SCOPED LINK STYLING ONLY FOR RESOURCES PAGE === */
-
-.resources-scope a,
-.resources-scope a:visited {
-  color: #000000 !important;       /* black */
-  font-weight: normal !important;  /* not bold */
-  text-decoration: underline !important;
-}
-
-.resources-scope a:hover,
-.resources-scope a:focus {
-  color: #000000 !important;
-  text-decoration: underline !important;
-}
-
-/* If inside a bold element, keep link normal */
-.resources-scope strong a,
-.resources-scope b a {
-  font-weight: normal !important;
-  color: #000000 !important;
 }
 
 /* === CUSTOM STYLING FOR COLLAPSIBLE CALLOUTS (BLUE + YELLOW THEME) === */

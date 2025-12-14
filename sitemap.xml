@@ -2,42 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://Provenance-lab.github.io/coding_provenance/resources.html</loc>
-    <lastmod>2025-12-08T08:12:23.660Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/datavisualization.html</loc>
-    <lastmod>2025-12-08T13:54:06.758Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/index.html</loc>
-    <lastmod>2025-12-08T13:39:24.487Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/python.html</loc>
-    <lastmod>2025-12-08T13:52:29.534Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/datamodels.html</loc>
-    <lastmod>2025-12-08T13:50:27.112Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/dataanalysis.html</loc>
-    <lastmod>2025-12-08T13:54:02.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/dataset.html</loc>
-    <lastmod>2025-12-07T10:22:55.746Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/nlp.html</loc>
-    <lastmod>2025-12-08T13:47:08.142Z</lastmod>
+    <lastmod>2025-12-13T07:14:53.333Z</lastmod>
   </url>
   <url>
     <loc>https://Provenance-lab.github.io/coding_provenance/about.html</loc>
     <lastmod>2025-12-07T17:36:51.376Z</lastmod>
   </url>
   <url>
-    <loc>https://Provenance-lab.github.io/coding_provenance/ocr.html</loc>
-    <lastmod>2025-12-07T10:23:01.641Z</lastmod>
+    <loc>https://Provenance-lab.github.io/coding_provenance/nlp.html</loc>
+    <lastmod>2025-12-08T13:47:08.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/dataset.html</loc>
+    <lastmod>2025-12-14T14:42:57.072Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/dataanalysis.html</loc>
+    <lastmod>2025-12-08T13:54:02.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/datamodels.html</loc>
+    <lastmod>2025-12-08T13:50:27.112Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/python.html</loc>
+    <lastmod>2025-12-08T13:52:29.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/index.html</loc>
+    <lastmod>2025-12-08T13:39:24.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Provenance-lab.github.io/coding_provenance/datavisualization.html</loc>
+    <lastmod>2025-12-13T07:36:23.905Z</lastmod>
   </url>
 </urlset>

@@ -282,35 +282,47 @@ body.scrolled #hero-intro {
   }
 }
 
-/* === CUSTOM STYLING FOR COLLAPSIBLE CALLOUTS (BLUE + YELLOW THEME) === */
 
-.callout-note.callout {
-  border: 1px solid hsla(54, 79%, 76%, 0.634) !important;     /* soft yellow border */
-  border-radius: 12px !important;
-  background-color: #ffffff !important;     /* white content box */
+/* =========================================
+   GLOBAL – COLLAPSIBLE CALLOUTS (LIGHT YELLOW)
+   ========================================= */
+
+.callout-note {
+  border: 1px solid hsla(54, 60%, 88%, 1) !important;   /* amarillo muy claro */
+  border-radius: 10px !important;
+  background-color: #fffdf4 !important;               /* blanco cálido */
   padding-top: 0 !important;
+
+  max-width: 520px;                                   /* más estrecho */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Header area (the clickable title) */
+/* Header area (clickable title) */
 .callout-note.callout .callout-header {
-  background-color: hsla(54, 79%, 76%, 0.634) !important;     /* pastel yellow */
-  color: #012f4a !important;                /* dark blue text */
+  background-color: rgb(255, 255, 255) !important;  /* amarillo muy suave */
+  color: #4a86e8 !important;                           /* gris-azulado oscuro */
   font-family: "Google Sans Code", serif !important;
-  font-weight: 700 !important;
-  border-radius: 12px 12px 0 0 !important;
-  padding: 10px 14px !important;
+  font-weight: 600 !important;
+
+  border-radius: 10px 10px 0 0 !important;
+  padding: 8px 12px !important;
   margin: 0 !important;
-  border-bottom: 1px solid hsla(54, 79%, 76%, 0.634) !important;
+
+  border-bottom: 1px solid rgb(250, 237, 122) !important;
 }
 
-/* Remove the default note icon */
+/* Remove default note icon */
 .callout-note.callout .callout-icon {
   display: none !important;
 }
+/* =========================================
+   GLOBAL – CODE BLOCKS (VERY LIGHT GREY)
+   ========================================= */
 
-/* Body area */
-.callout-note.callout .callout-body {
-  padding: 16px 18px !important;
-  color: #000000 !important;
-  font-family: inherit;
+pre,
+pre code {
+  background-color: #f8f8f8 !important;   /* gris casi blanco */
+  border: 1px solid #eeeeee !important;
+  border-radius: 6px;
 }

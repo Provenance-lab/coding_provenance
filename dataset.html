@@ -166,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-anchor-id="knoedler-stock-books">Knoedler Stock Books</h3>
 <section id="about-the-dataset" class="level4">
 <h4 data-anchor-id="about-the-dataset">About the Dataset</h4>
-<p>This dataset contains more than 40,000 records transcribed from the <strong>11 painting stock books</strong> and enhanced with information from the 21 paintings and watercolors sales books of <strong>M. Knoedler &amp; Co.&nbsp;in New York (1872-1970)</strong>.</p>
+<p>This dataset contains 53,958 records transcribed from the <strong>11 painting stock books</strong> and enhanced with information from the 21 paintings and watercolors sales books of <strong>M. Knoedler &amp; Co.&nbsp;in New York (1872-1970)</strong>.</p>
 <p><strong><a href="https://www.getty.edu/research/provenance/">The Getty Provenance Index</a></strong></p>
 <p><strong><a href="https://drive.google.com/file/d/1zrJUellizALRvbjxQZMYkW6-Y5WiUjBh/view?usp=sharing">Knoedler Dataset</a></strong></p>
 <hr>
@@ -188,8 +188,10 @@ Variables
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 32%">
-<col style="width: 21%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 19%">
+<col style="width: 10%">
 <col style="width: 46%">
 </colgroup>
 <thead>
@@ -197,78 +199,136 @@ Variables
 <th>Variable</th>
 <th>Type</th>
 <th>Description</th>
+<th>Notes</th>
+<th>CIDOC-CRM / Linked Art Mapping</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>transaction_id</strong></td>
-<td>String / Integer</td>
-<td>Unique identifier for each transaction record.</td>
+<td>String</td>
+<td>Unique identifier for the transaction event.</td>
+<td>Getty-derived identifier (URI suffix only).</td>
+<td><code>E7 Activity</code> / <code>la:ProvenanceEntry</code></td>
 </tr>
 <tr class="even">
-<td><strong>artwork</strong></td>
+<td><strong>transaction_activity_label</strong></td>
 <td>String</td>
-<td>Title or short descriptive name of the artwork involved in the transaction.</td>
+<td>Human-readable label describing the transaction activity.</td>
+<td>Verbatim label summarizing the transaction.</td>
+<td><code>E7 Activity</code> → <code>rdfs:label</code></td>
 </tr>
 <tr class="odd">
-<td><strong>artist</strong></td>
+<td><strong>acquisition_id</strong></td>
 <td>String</td>
-<td>Name of the artist associated with the artwork.</td>
+<td>Identifier of the acquisition sub-event within the transaction.</td>
+<td>Getty-derived identifier; represents method/context of acquisition.</td>
+<td><code>E8 Acquisition</code></td>
 </tr>
 <tr class="even">
-<td><strong>artist_role</strong></td>
+<td><strong>acquisition_label</strong></td>
 <td>String</td>
-<td>Role of tha artists within the transaction</td>
+<td>Label describing the acquisition type or method.</td>
+<td>Compound label (e.g.&nbsp;provenance + purchase).</td>
+<td><code>E8 Acquisition</code> → <code>P2 has type</code></td>
 </tr>
 <tr class="odd">
-<td><strong>artist_nationality</strong></td>
-<td>String</td>
-<td>Nationality of the artist, when recorded.</td>
+<td><strong>transaction_data</strong></td>
+<td>Date / String</td>
+<td>Date associated with the transaction.</td>
+<td>Recorded transaction date; may include uncertainty (e.g.&nbsp;day = 00).</td>
+<td><code>E7 Activity</code> → <code>P4 has time-span</code></td>
 </tr>
 <tr class="even">
-<td><strong>artist_country</strong></td>
+<td><strong>artwork_id</strong></td>
 <td>String</td>
-<td>Country associated with the artist.</td>
+<td>Identifier of the artwork involved in the transaction.</td>
+<td>Getty-derived object identifier.</td>
+<td><code>E22 Human-Made Object</code></td>
 </tr>
 <tr class="odd">
+<td><strong>artwork_label</strong></td>
+<td>String</td>
+<td>Title or short descriptive name of the artwork.</td>
+<td>Verbatim title as recorded.</td>
+<td><code>E22 Human-Made Object</code> → <code>rdfs:label</code></td>
+</tr>
+<tr class="even">
 <td><strong>artwork_type</strong></td>
 <td>String</td>
-<td>Type or category of the artwork (e.g.&nbsp;painting, drawing, sculpture).</td>
-</tr>
-<tr class="even">
-<td><strong>stockbook_date</strong></td>
-<td>Date / String</td>
-<td>Date of the transaction as recorded in the Knoedler stockbooks.</td>
+<td>High-level type of the artwork.</td>
+<td>Typically Getty/AAT-derived textual label.</td>
+<td><code>E22 Human-Made Object</code> → <code>P2 has type</code></td>
 </tr>
 <tr class="odd">
-<td><strong>buyer</strong></td>
+<td><strong>visual_object_type_labels</strong></td>
+<td>String</td>
+<td>More specific representational or genre classification.</td>
+<td>Textual category (e.g.&nbsp;landscapes).</td>
+<td><code>E55 Type</code></td>
+</tr>
+<tr class="even">
+<td><strong>artist_id</strong></td>
+<td>String</td>
+<td>Identifier of the artist associated with the artwork.</td>
+<td>Getty-derived authority identifier.</td>
+<td><code>E21 Person</code></td>
+</tr>
+<tr class="odd">
+<td><strong>artist_label</strong></td>
+<td>String</td>
+<td>Name of the artist associated with the artwork.</td>
+<td>Verbatim name; not normalized beyond source.</td>
+<td><code>E21 Person</code> → <code>rdfs:label</code></td>
+</tr>
+<tr class="even">
+<td><strong>artists_nationality</strong></td>
+<td>String</td>
+<td>Nationality of the artist, when recorded.</td>
+<td>Textual value; not reconciled to authority files.</td>
+<td><code>E21 Person</code> → <code>P107i is current or former member of</code></td>
+</tr>
+<tr class="odd">
+<td><strong>buyer_id</strong></td>
+<td>String</td>
+<td>Identifier of the buyer involved in the transaction.</td>
+<td>Getty-derived actor identifier.</td>
+<td><code>E39 Actor</code></td>
+</tr>
+<tr class="even">
+<td><strong>buyer_label</strong></td>
 <td>String</td>
 <td>Name of the buyer involved in the transaction.</td>
-</tr>
-<tr class="even">
-<td><strong>buyer_country</strong></td>
-<td>String</td>
-<td>Country associated with the buyer.</td>
+<td>Verbatim name only; locations removed.</td>
+<td><code>E39 Actor</code> → <code>P22 transferred title to</code></td>
 </tr>
 <tr class="odd">
-<td><strong>seller</strong></td>
+<td><strong>seller_id</strong></td>
+<td>String</td>
+<td>Identifier of the seller involved in the transaction.</td>
+<td>Getty-derived actor identifier.</td>
+<td><code>E39 Actor</code></td>
+</tr>
+<tr class="even">
+<td><strong>seller_label</strong></td>
 <td>String</td>
 <td>Name of the seller involved in the transaction.</td>
-</tr>
-<tr class="even">
-<td><strong>seller_country</strong></td>
-<td>String</td>
-<td>Country associated with the seller.</td>
+<td>Verbatim name only; locations removed.</td>
+<td><code>E39 Actor</code> → <code>P23 transferred title from</code></td>
 </tr>
 <tr class="odd">
-<td><strong>price</strong></td>
+<td><strong>payment_quantity</strong></td>
 <td>Numeric</td>
-<td>Recorded transaction price.</td>
+<td>Monetary amount recorded for the transaction.</td>
+<td>Numeric value without currency symbol.</td>
+<td><code>E97 Monetary Amount</code></td>
 </tr>
 <tr class="even">
-<td><strong>currency</strong></td>
+<td><strong>payment_currency</strong></td>
 <td>String</td>
-<td>Currency in which the price is expressed.</td>
+<td>Currency in which the payment was made.</td>
+<td>Textual currency label (not ISO-normalized).</td>
+<td><code>E98 Currency</code></td>
 </tr>
 </tbody>
 </table>

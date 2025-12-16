@@ -289,11 +289,11 @@ body.scrolled #hero-intro {
 
 .callout-note {
   border: 1px solid hsla(54, 60%, 88%, 1) !important;   /* amarillo muy claro */
-  border-radius: 10px !important;
+  border-radius: 14px !important;
   background-color: #fffdf4 !important;               /* blanco cálido */
   padding-top: 0 !important;
 
-  max-width: 520px;                                   /* más estrecho */
+  max-width: 890px;                                   /* más estrecho */
   margin-left: auto;
   margin-right: auto;
 }
@@ -303,10 +303,10 @@ body.scrolled #hero-intro {
   background-color: rgb(255, 255, 255) !important;  /* amarillo muy suave */
   color: #4a86e8 !important;                           /* gris-azulado oscuro */
   font-family: "Google Sans Code", serif !important;
-  font-weight: 600 !important;
+  font-weight: 1000 !important;
 
-  border-radius: 10px 10px 0 0 !important;
-  padding: 8px 12px !important;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 10px 14px !important;
   margin: 0 !important;
 
   border-bottom: 1px solid rgb(250, 237, 122) !important;

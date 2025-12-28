@@ -261,7 +261,7 @@ Note
 </tr>
 </tbody>
 </table>
-<p>The information contained on this table is just an example</p>
+<p><strong>The information contained on this table is just an example</strong></p>
 <p>At the end of this step, you have:</p>
 <ul>
 <li>a table of <strong>objects</strong></li>
@@ -283,6 +283,43 @@ Note
 <li><code>party_id</code> (an ID you assign at extraction time)</li>
 <li><code>party_name_raw</code> (the exact string as it appears in the sentence)</li>
 </ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>object_id</th>
+<th>provenance_event_id</th>
+<th>party_id</th>
+<th>party_name_raw</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>29909</td>
+<td>PE_0002</td>
+<td>PM_0001</td>
+<td>Christie’s</td>
+</tr>
+<tr class="even">
+<td>29909</td>
+<td>PE_0002</td>
+<td>PM_0002</td>
+<td>Richards</td>
+</tr>
+<tr class="odd">
+<td>29909</td>
+<td>PE_0001</td>
+<td>PM_0003</td>
+<td>Miss Sally Heard Lewis</td>
+</tr>
+<tr class="even">
+<td>29909</td>
+<td>PE_0003</td>
+<td>PM_0004</td>
+<td>Michael Smith</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The information contained on this table is just an example</strong></p>
 <p>By this point, you have three connected datasets:</p>
 <ul>
 <li><strong>Objects</strong> (<code>object_id</code>)</li>
@@ -335,6 +372,57 @@ Tip
 </ul></li>
 </ol>
 <p>This mapping file becomes your <strong>rulebook</strong> for merging duplicates and correcting typos.</p>
+<p>This mapping file becomes your <strong>rulebook</strong> for merging duplicates and correcting typos.</p>
+<p>Example mapping file (cleaning dictionary):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>party_id</th>
+<th>party_name_raw</th>
+<th>party_id_correct</th>
+<th>name_correct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PM_0007</td>
+<td>AIC</td>
+<td>P_0001</td>
+<td>Art Institute of Chicago</td>
+</tr>
+<tr class="even">
+<td>PM_0134</td>
+<td>Art Institute</td>
+<td>P_0001</td>
+<td>Art Institute of Chicago</td>
+</tr>
+<tr class="odd">
+<td>PM_0135</td>
+<td>Art Institue of Chicago</td>
+<td>P_0001</td>
+<td>Art Institute of Chicago</td>
+</tr>
+<tr class="even">
+<td>PM_0201</td>
+<td>PICASSO</td>
+<td>P_0002</td>
+<td>Pablo Picasso</td>
+</tr>
+<tr class="odd">
+<td>PM_0202</td>
+<td>The artists</td>
+<td>P_0002</td>
+<td>Pablo Picasso</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The information contained on this table is just an example</strong></p>
 </section>
 <section id="apply-the-dictionary" class="level4">
 <h4 data-anchor-id="apply-the-dictionary">Apply the dictionary</h4>
@@ -500,7 +588,7 @@ Note
 </tr>
 </tbody>
 </table>
-<p>The information contained on this table is just an example</p>
+<p><strong>The information contained on this table is just an example</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

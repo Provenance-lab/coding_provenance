@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sample Provenance Datasets – CPW</title>
+<title>After Workshop Activity – CPW</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,11 +101,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./bonus.html"> 
+    <a class="nav-link active" href="./bonus.html" aria-current="page"> 
 <span class="menu-text">Bonus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./dataset.html" aria-current="page"> 
+    <a class="nav-link" href="./dataset.html"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
   <li class="nav-item">
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sample Provenance Datasets</h1>
+<h1 class="title">After Workshop Activity</h1>
 </div>
 
 
@@ -166,390 +166,361 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="knoedler-stock-books" class="level3">
-<h3 data-anchor-id="knoedler-stock-books">Knoedler Stock Books</h3>
-<section id="about-the-dataset" class="level4">
-<h4 data-anchor-id="about-the-dataset">About the Dataset</h4>
-<p>This dataset contains <strong>53,958 records transcribed from the 11 painting stock books</strong> and enhanced with information from the 21 paintings and watercolors sales books of <strong>M. Knoedler &amp; Co.&nbsp;in New York (1872-1970)</strong>.</p>
-<p><strong><a href="https://www.getty.edu/research/provenance/">The Getty Provenance Index</a></strong></p>
-<p><strong><a href="https://drive.google.com/file/d/1I0ei7YSvMPv7B0FXJfIH9KVIQbQG0FkM/view?usp=drive_link">Knoedler Dataset</a></strong></p>
-<p><strong><a href="https://drive.google.com/file/d/115XgAtSrc1leVUFUcN-0OXcPgXXD75UD/view?usp=drive_link">Knoedler Full Dataset</a></strong></p>
+<section id="overview" class="level2">
+<h2 data-anchor-id="overview">Overview</h2>
+<p>This activity has two complementary goals. First, it gives you a chance to rehearse the workflow we followed throughout the workshop using a small, controlled dataset. Second, it provides a clear sequence of steps you can reuse and adapt to your own provenance material.</p>
+<p>Starting from a single CSV containing <strong>unstructured provenance text</strong>, you will produce a set of <strong>connected, structured tables</strong> that you can analyze in a notebook—or export as <strong>Gephi-ready nodes and edges</strong> for network analysis.</p>
+<p>You will build three core datasets:</p>
+<ul>
+<li><strong>Objects table</strong> (one row per artwork)<br>
+</li>
+<li><strong>Provenance events table</strong> (one row per provenance event sentence). This will be our <strong>master spreadsheet</strong>.<br>
+</li>
+<li><strong>Parties table</strong> (one row per party mention; later consolidated into one row per unique party)</li>
+</ul>
+<p>Once identifiers are consistent across all three tables, your data can be handled like a <strong>relational database</strong> inside Google Colab: you can join, filter, and query across objects, events, and parties.</p>
+<p><a href="https://docs.google.com/document/d/16sodkK0Mn8iOUOAavNHrlQojcbc-5ZwBKaWnSFfJIwA/edit?usp=sharing">Download this workflow as a PDF</a></p>
 <hr>
 </section>
-<section id="documentation-of-variables" class="level4">
-<h4 data-anchor-id="documentation-of-variables">Documentation of Variables</h4>
-<p><em>(click to expand each section)</em></p>
-<div class="callout callout-style-default callout-note callout-titled" title="1. Variables">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<section id="dataset-for-this-activity" class="level2">
+<h2 data-anchor-id="dataset-for-this-activity">Dataset for this activity</h2>
+<p>Since the full Art Institute of Chicago dataset was too large to analyze within the workshop, and because we wanted to practice the full process of moving from unstructured to structured provenance data, on the final day we worked with two artworks by Paul Gauguin.</p>
+<p>In this activity, you will focus instead on <strong>all Pablo Ruiz Picasso artworks in the Art Institute of Chicago dataset</strong>. The object-level metadata is intentionally minimal, because our main focus is the <strong>provenance text</strong>. This provenance text has <strong>not</strong> been cleaned or structured—you will work with it exactly as it was downloaded from the AIC.</p>
+<p><strong>Dataset:</strong> <a href="https://drive.google.com/file/d/1pnoT8TVXfnsYwMVnDY233IBFXI91i7Eh/view?usp=drive_link">Picasso Artworks at the Art Institute of Chicago</a></p>
+<hr>
+</section>
+<section id="step-by-step-workflow" class="level2">
+<h2 data-anchor-id="step-by-step-workflow">Step-by-step workflow</h2>
+<section id="part-a-prepare-the-data" class="level3">
+<h3 data-anchor-id="part-a-prepare-the-data">Part A — Prepare the data</h3>
+<ol type="1">
+<li>Open the file <code>subset_picasso_AIC.csv</code>.</li>
+<li>Inspect the dataset:
+<ul>
+<li>Review the column names (headers).</li>
+<li>Preview the first rows to understand what each column contains.</li>
+</ul></li>
+<li>Create a smaller <em>subset table</em> that keeps only:
+<ul>
+<li><code>object_id</code></li>
+<li><code>provenance_text</code></li>
+</ul></li>
+</ol>
+<p>This gives you <strong>one row per artwork</strong>, with its full provenance text in a single column.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Variables
+Note
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 9%">
-<col style="width: 19%">
-<col style="width: 10%">
-<col style="width: 46%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-<th>Notes</th>
-<th>CIDOC-CRM / Linked Art Mapping</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>transaction_id</strong></td>
-<td>String</td>
-<td>Unique identifier for the transaction event.</td>
-<td>Getty-derived identifier (URI suffix only).</td>
-<td><code>E7 Activity</code> / <code>la:ProvenanceEntry</code></td>
-</tr>
-<tr class="even">
-<td><strong>transaction_activity_label</strong></td>
-<td>String</td>
-<td>Human-readable label describing the transaction activity.</td>
-<td>Verbatim label summarizing the transaction.</td>
-<td><code>E7 Activity</code> → <code>rdfs:label</code></td>
-</tr>
-<tr class="odd">
-<td><strong>acquisition_id</strong></td>
-<td>String</td>
-<td>Identifier of the acquisition sub-event within the transaction.</td>
-<td>Getty-derived identifier; represents method/context of acquisition.</td>
-<td><code>E8 Acquisition</code></td>
-</tr>
-<tr class="even">
-<td><strong>acquisition_label</strong></td>
-<td>String</td>
-<td>Label describing the acquisition type or method.</td>
-<td>Compound label (e.g.&nbsp;provenance + purchase).</td>
-<td><code>E8 Acquisition</code> → <code>P2 has type</code></td>
-</tr>
-<tr class="odd">
-<td><strong>transaction_date</strong></td>
-<td>Date / String</td>
-<td>Date associated with the transaction.</td>
-<td>Recorded transaction date; may include uncertainty (e.g.&nbsp;day = 00).</td>
-<td><code>E7 Activity</code> → <code>P4 has time-span</code></td>
-</tr>
-<tr class="even">
-<td><strong>artwork_id</strong></td>
-<td>String</td>
-<td>Identifier of the artwork involved in the transaction.</td>
-<td>Getty-derived object identifier.</td>
-<td><code>E22 Human-Made Object</code></td>
-</tr>
-<tr class="odd">
-<td><strong>artwork_label</strong></td>
-<td>String</td>
-<td>Title or short descriptive name of the artwork.</td>
-<td>Verbatim title as recorded.</td>
-<td><code>E22 Human-Made Object</code> → <code>rdfs:label</code></td>
-</tr>
-<tr class="even">
-<td><strong>artwork_type</strong></td>
-<td>String</td>
-<td>High-level type of the artwork.</td>
-<td>Typically Getty/AAT-derived textual label.</td>
-<td><code>E22 Human-Made Object</code> → <code>P2 has type</code></td>
-</tr>
-<tr class="odd">
-<td><strong>visual_object_type_labels</strong></td>
-<td>String</td>
-<td>More specific representational or genre classification.</td>
-<td>Textual category (e.g.&nbsp;landscapes).</td>
-<td><code>E55 Type</code></td>
-</tr>
-<tr class="even">
-<td><strong>artist_id</strong></td>
-<td>String</td>
-<td>Identifier of the artist associated with the artwork.</td>
-<td>Getty-derived authority identifier.</td>
-<td><code>E21 Person</code></td>
-</tr>
-<tr class="odd">
-<td><strong>artist_label</strong></td>
-<td>String</td>
-<td>Name of the artist associated with the artwork.</td>
-<td>Verbatim name; not normalized beyond source.</td>
-<td><code>E21 Person</code> → <code>rdfs:label</code></td>
-</tr>
-<tr class="even">
-<td><strong>artists_nationality</strong></td>
-<td>String</td>
-<td>Nationality of the artist, when recorded.</td>
-<td>Textual value; not reconciled to authority files.</td>
-<td><code>E21 Person</code> → <code>P107i is current or former member of</code></td>
-</tr>
-<tr class="odd">
-<td><strong>buyer_id</strong></td>
-<td>String</td>
-<td>Identifier of the buyer involved in the transaction.</td>
-<td>Getty-derived actor identifier.</td>
-<td><code>E39 Actor</code></td>
-</tr>
-<tr class="even">
-<td><strong>buyer_label</strong></td>
-<td>String</td>
-<td>Name of the buyer involved in the transaction.</td>
-<td>Verbatim name only; locations removed.</td>
-<td><code>E39 Actor</code> → <code>P22 transferred title to</code></td>
-</tr>
-<tr class="odd">
-<td><strong>seller_id</strong></td>
-<td>String</td>
-<td>Identifier of the seller involved in the transaction.</td>
-<td>Getty-derived actor identifier.</td>
-<td><code>E39 Actor</code></td>
-</tr>
-<tr class="even">
-<td><strong>seller_label</strong></td>
-<td>String</td>
-<td>Name of the seller involved in the transaction.</td>
-<td>Verbatim name only; locations removed.</td>
-<td><code>E39 Actor</code> → <code>P23 transferred title from</code></td>
-</tr>
-<tr class="odd">
-<td><strong>payment_quantity</strong></td>
-<td>Numeric</td>
-<td>Monetary amount recorded for the transaction.</td>
-<td>Numeric value without currency symbol.</td>
-<td><code>E97 Monetary Amount</code></td>
-</tr>
-<tr class="even">
-<td><strong>payment_currency</strong></td>
-<td>String</td>
-<td>Currency in which the payment was made.</td>
-<td>Textual currency label (not ISO-normalized).</td>
-<td><code>E98 Currency</code></td>
-</tr>
-</tbody>
-</table>
+<p>This “objects subset” is your starting point. Everything else (events, parties, networks) will be derived from this table.</p>
 </div>
 </div>
-</div>
-<hr>
 </section>
+<section id="part-b-turn-provenance-text-into-provenance-events" class="level3">
+<h3 data-anchor-id="part-b-turn-provenance-text-into-provenance-events">Part B — Turn provenance text into provenance events</h3>
+<p>Provenance text is typically written as a sequence of statements. To structure it, treat each sentence as a discrete <strong>provenance event</strong> (for example: a sale, a transfer, an auction, an acquisition, a bequest).</p>
+<ol type="1">
+<li>Split <code>provenance_text</code> into sentences.</li>
+<li>Create a <strong>provenance events table</strong> where each sentence becomes one row.</li>
+<li>Assign a unique identifier to each event.</li>
+</ol>
+<p>Your provenance events table should include:</p>
+<ul>
+<li><code>provenance_event_id</code></li>
+<li><code>object_id</code> (to preserve the link back to the artwork)</li>
+<li><code>provenance_event_text</code> (the sentence)</li>
+</ul>
+<p>At the end of this step, you have:</p>
+<ul>
+<li>a table of <strong>objects</strong></li>
+<li>a table of <strong>provenance events</strong> linked to objects via <code>object_id</code></li>
+</ul>
 </section>
-<section id="art-institute-of-chicago" class="level3">
-<h3 data-anchor-id="art-institute-of-chicago">Art Institute of Chicago</h3>
-<section id="about-the-dataset-1" class="level4">
-<h4 data-anchor-id="about-the-dataset-1">About the Dataset</h4>
-<p>This dataset compiles provenance records from the <strong>Art Institute of Chicago’s online collection database</strong>.<br>
-It includes artworks such as paintings, sculptures, prints, drawings, and decorative arts.</p>
-<p>In the original API, provenance information appears as <em>free text</em>. For the purposes of this workshop, this material has been transformed into <strong>structured provenance events</strong>, where each event includes one or more involved parties (people, families, institutions) and other semantic components. The information of all provenance statements remains exactly as provided by the Art Institute of Chicago — no corrections, additions, or interpretative changes have been introduced.</p>
-<p><strong><a href="https://api.artic.edu/docs/#introduction">API — Art Institute of Chicago</a></strong></p>
-<p><strong><a href="https://drive.google.com/file/d/1Z_ow0xkaxO-4nRsQ82RYtjlb2QwGtl_M/view?usp=drive_link">Sunday Practice</a></strong></p>
-<p><strong><a href="https://drive.google.com/file/d/13T2MtC6ceOg7uc209HN0f-smtKIcoc7q/view?usp=drive_link">Art Institute of Chicago Provenance Dataset</a></strong></p>
-<hr>
-</section>
-<section id="documentation-of-variables-1" class="level4">
-<h4 data-anchor-id="documentation-of-variables-1">Documentation of Variables</h4>
-<p><em>(click to expand each section)</em></p>
-<div class="callout callout-style-default callout-note callout-titled" title="1. Artwork-Level Variables">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<section id="part-c-extract-parties-people-and-institutions" class="level3">
+<h3 data-anchor-id="part-c-extract-parties-people-and-institutions">Part C — Extract parties (people and institutions)</h3>
+<p>Now extract entities from each provenance event sentence, focusing on:</p>
+<ul>
+<li><strong>People</strong> (collectors, dealers, artists, etc.)</li>
+<li><strong>Institutions</strong> (museums, galleries, auction houses, etc.)</li>
+</ul>
+<p>Create a <strong>parties table</strong> (mentions of people/institutions). At this stage you will usually have <strong>multiple rows per provenance event</strong>, because one sentence can mention several parties.</p>
+<p>Include the following columns:</p>
+<ul>
+<li><code>object_id</code></li>
+<li><code>provenance_event_id</code></li>
+<li><code>party_id</code> (an ID you assign at extraction time)</li>
+<li><code>party_name_raw</code> (the exact string as it appears in the sentence)</li>
+</ul>
+<p>By this point, you have three connected datasets:</p>
+<ul>
+<li><strong>Objects</strong> (<code>object_id</code>)</li>
+<li><strong>Provenance events</strong> (<code>provenance_event_id</code>, linked to <code>object_id</code>)</li>
+<li><strong>Party mentions</strong> (<code>party_id</code>, linked to <code>provenance_event_id</code> and <code>object_id</code>)</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Artwork-Level Variables
+Tip
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>These fields sit at the top level of each JSON object.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 32%">
-<col style="width: 21%">
-<col style="width: 46%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>id</strong></td>
-<td>Integer</td>
-<td>Internal numeric identifier for each artwork (unique).</td>
-</tr>
-<tr class="even">
-<td><strong>title</strong></td>
-<td>String</td>
-<td>Public title of the work.</td>
-</tr>
-<tr class="odd">
-<td><strong>alt_titles</strong></td>
-<td>String or array, nullable</td>
-<td>Alternative titles when available.</td>
-</tr>
-<tr class="even">
-<td><strong>main_reference_number</strong></td>
-<td>String</td>
-<td>Accession/inventory number.</td>
-</tr>
-<tr class="odd">
-<td><strong>date_start</strong></td>
-<td>Integer</td>
-<td>Earliest possible creation year (BCE negative, CE positive).</td>
-</tr>
-<tr class="even">
-<td><strong>date_end</strong></td>
-<td>Integer</td>
-<td>Latest possible creation year.</td>
-</tr>
-<tr class="odd">
-<td><strong>artist_display</strong></td>
-<td>String</td>
-<td>Display text describing maker/culture/origin.</td>
-</tr>
-<tr class="even">
-<td><strong>place_of_origin</strong></td>
-<td>String</td>
-<td>Normalized place name extracted from the record.</td>
-</tr>
-<tr class="odd">
-<td><strong>dimensions</strong></td>
-<td>String</td>
-<td>Free-text measurements.</td>
-</tr>
-<tr class="even">
-<td><strong>medium_display</strong></td>
-<td>String</td>
-<td>Materials and techniques.</td>
-</tr>
-<tr class="odd">
-<td><strong>inscriptions</strong></td>
-<td>String, nullable</td>
-<td>Description or transcription of inscriptions.</td>
-</tr>
-<tr class="even">
-<td><strong>credit_line</strong></td>
-<td>String</td>
-<td>How the work entered the collection (gift, purchase, etc.).</td>
-</tr>
-<tr class="odd">
-<td><strong>provenance_text</strong></td>
-<td>String</td>
-<td>Narrative provenance as written by AIC curators.</td>
-</tr>
-<tr class="even">
-<td><strong>events_structured</strong></td>
-<td>Array</td>
-<td>Parsed provenance events derived from the narrative.</td>
-</tr>
-</tbody>
-</table>
+<p>“Raw” party names are extremely valuable. Never overwrite them. Always keep a <code>party_name_raw</code> column, even after standardization.</p>
 </div>
 </div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="2. Provenance Event-Level Variables">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+</section>
+<section id="part-d-clean-and-standardize-party-names-important" class="level3">
+<h3 data-anchor-id="part-d-clean-and-standardize-party-names-important">Part D — Clean and standardize party names (important)</h3>
+<p>Cleaning is not cosmetic—it is structural. If the same party appears under multiple spellings, your analysis and networks will treat them as different entities unless you standardize them.</p>
+<p>You cannot rely on <code>party_id</code> alone, because the same party may appear in different forms, such as:</p>
+<ul>
+<li>“AIC”</li>
+<li>“Art Institute of Chicago”</li>
+<li>“Art Institue of Chicago” (typo)</li>
+</ul>
+<p>In this dataset, there are two common issues to fix:</p>
+<ul>
+<li><strong>AIC</strong> and <strong>Art Institute</strong> refer to the same institution (the Art Institute of Chicago).</li>
+<li>The artist name (written in capital letters too) refers to <strong>Pablo Picasso</strong> and should not become an “institution” or a generic party label like “The artists”.</li>
+</ul>
+<p>If you only take “unique values” based on IDs, these will still survive as separate parties.</p>
+<section id="create-a-cleaning-dictionary-mapping-file" class="level4">
+<h4 data-anchor-id="create-a-cleaning-dictionary-mapping-file">Create a cleaning dictionary (mapping file)</h4>
+<ol type="1">
+<li>Export a list of <strong>unique raw party names</strong> (and their current <code>party_id</code>) to CSV or Excel.</li>
+<li>Open the file in Google Sheets / Excel.</li>
+<li>Add two new columns:
+<ul>
+<li><code>party_id_correct</code></li>
+<li><code>name_correct</code></li>
+</ul></li>
+<li>For each raw variant, assign:
+<ul>
+<li>the <em>correct standardized party ID</em> (<code>party_id_correct</code>)</li>
+<li>the <em>correct standardized party name</em> (<code>name_correct</code>)</li>
+</ul></li>
+</ol>
+<p>This mapping file becomes your <strong>rulebook</strong> for merging duplicates and correcting typos.</p>
+</section>
+<section id="apply-the-dictionary" class="level4">
+<h4 data-anchor-id="apply-the-dictionary">Apply the dictionary</h4>
+<ol type="1">
+<li>Save the mapping file.</li>
+<li>Upload it back to Google Colab.</li>
+<li>Apply it to your parties table to add:
+<ul>
+<li><code>party_id_correct</code></li>
+<li><code>name_correct</code></li>
+</ul></li>
+</ol>
+<p>After this step, parties are <strong>cleaned and consistent</strong>.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Provenance Event-Level Variables
+Warning
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Each entry in <code>events_structured</code> represents a structured provenance fragment.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 34%">
-<col style="width: 20%">
-<col style="width: 44%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>event</strong></td>
-<td>String</td>
-<td>Event identifier (e.g., “event_1”). Groups components belonging to the same ownership step.</td>
-</tr>
-<tr class="even">
-<td><strong>value</strong></td>
-<td>String</td>
-<td>Extracted fragment referring to a person, method, date, place, etc.</td>
-</tr>
-<tr class="odd">
-<td><strong>type</strong></td>
-<td>Array of strings</td>
-<td>Semantic labels defining the nature of <code>value</code>. May include:</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>• <strong>Person</strong> — Named individual</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>• <strong>Party</strong> — Any owner (person, family, institution)</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>• <strong>Group</strong> — Collective/institutional actor</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>• <strong>Receiver</strong> — Party acquiring the work</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>• <strong>Method</strong> — How the object changed hands (“sold”, “given”)</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>• <strong>Time</strong> — Specific dates or years</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>• <strong>Vagueness</strong> — Uncertain expressions (“by 1938”)</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>• <strong>Name</strong> — Explicit name tag (overlaps with Person/Party)</td>
-</tr>
-</tbody>
-</table>
+<p>Do not delete raw variants. Keep them and add corrected fields. You want traceability: you should always be able to answer “what exactly was written in the source text?”</p>
 </div>
 </div>
+</section>
+</section>
+<section id="part-e-optional-enrichment-depends-on-your-project" class="level3">
+<h3 data-anchor-id="part-e-optional-enrichment-depends-on-your-project">Part E — Optional enrichment (depends on your project)</h3>
+<p>Once party names are standardized, you may want to enrich your parties table depending on your research questions.</p>
+<p>Common enrichment options:</p>
+<ul>
+<li>Retrieve extra attributes from <strong>Wikidata</strong> (country, occupation, founding date, birth/death dates).</li>
+<li>Add <code>type</code> (person vs institution).</li>
+<li>Add <code>gender</code>, <code>nationality</code>, <code>city</code>, or other metadata.</li>
+<li>Split personal names into <code>first_name</code> / <code>last_name</code> (more useful for people than institutions).</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div style="font-size:0.9em;color:#555;margin-top:40px;border-top:1px solid #eee;padding-top:15px;">
-<p>© 2025 Coding Provenance Workshop — Licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.<br>
-Reuse is encouraged — we happily promote changes of custody. Just be sure to write a good provenance record and <strong>cite this workshop</strong>.</p>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Enrichment is optional. It becomes most useful when you want analytical questions that depend on attributes (birth dates, places, nationality, gender, institutional type, etc.).</p>
+</div>
+</div>
+</section>
+<section id="part-f-complete-the-provenance-events-master-table" class="level3">
+<h3 data-anchor-id="part-f-complete-the-provenance-events-master-table">Part F — Complete the provenance events master table</h3>
+<p>Once you have created your provenance events table, it should look like this:</p>
+<p><code>object_id, provenance_event_id, provenance_event_text</code></p>
+<p>Now expand it into a richer event table that supports analysis and visualization.</p>
+<section id="split-parties-into-separate-numbered-columns" class="level4">
+<h4 data-anchor-id="split-parties-into-separate-numbered-columns">1) Split parties into separate numbered columns</h4>
+<p>If you haven’t done this already, take the parties mentioned in each <code>provenance_event_text</code> and split them into separate columns:</p>
+<ul>
+<li><code>party_1</code>, <code>party_2</code>, <code>party_3</code>, …</li>
+</ul>
+</section>
+<section id="add-party-ids-using-your-party-dictionary" class="level4">
+<h4 data-anchor-id="add-party-ids-using-your-party-dictionary">2) Add party IDs using your party dictionary</h4>
+<p>Use your mapping file (the dictionary with corrected IDs and names) to assign IDs for each party column:</p>
+<ul>
+<li><code>party_id_1</code> matches <code>party_1</code></li>
+<li><code>party_id_2</code> matches <code>party_2</code></li>
+<li>…</li>
+</ul>
+</section>
+<section id="extract-dates-and-create-an-event-date-column" class="level4">
+<h4 data-anchor-id="extract-dates-and-create-an-event-date-column">3) Extract dates and create an event date column</h4>
+<p>Extract dates from <code>provenance_event_text</code> and create:</p>
+<ul>
+<li><code>provenance_event_date</code></li>
+</ul>
+<p><strong>Important:</strong> some dates belong to party descriptions (not the event). Define a rule to avoid mixing them.</p>
+<p>One practical rule:</p>
+<ul>
+<li>If you see two dates separated by an en dash or hyphen (e.g., <code>1873–1948</code>), treat them as a <strong>lifespan</strong>, not an event date.</li>
+</ul>
+</section>
+<section id="extract-location-and-create-an-event-location-column" class="level4">
+<h4 data-anchor-id="extract-location-and-create-an-event-location-column">4) Extract location and create an event location column</h4>
+<p>Extract location information from <code>provenance_event_text</code> and create:</p>
+<ul>
+<li><code>provenance_event_location</code></li>
+</ul>
+</section>
+<section id="extract-the-method-of-transfer" class="level4">
+<h4 data-anchor-id="extract-the-method-of-transfer">5) Extract the method of transfer</h4>
+<p>Extract the method of transfer and create:</p>
+<ul>
+<li><code>method_of_transfer</code></li>
+</ul>
+<p>If your extraction model does not capture this reliably, define a controlled list and guide extraction using that vocabulary, for example:</p>
+<ul>
+<li>purchase</li>
+<li>gift</li>
+<li>bequest</li>
+<li>inheritance</li>
+<li>sale</li>
+<li>exchange</li>
+</ul>
+</section>
+<section id="final-expected-columns" class="level4">
+<h4 data-anchor-id="final-expected-columns">Final expected columns</h4>
+<p>At the end, your event-based master table will contain columns such as:</p>
+<ul>
+<li><code>object_id</code>, <code>provenance_event_id</code>, <code>provenance_event_text</code></li>
+<li><code>party_id_1</code>, <code>party_1</code>, <code>party_id_2</code>, <code>party_2</code>, …</li>
+<li><code>method_of_transfer</code>, <code>provenance_event_location</code>, <code>provenance_event_date</code></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This table is structured by provenance event, so <code>object_id</code> repeats across multiple rows. That repetition is correct: one object can have many provenance events.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="data-analysis-in-google-colab" class="level2">
+<h2 data-anchor-id="data-analysis-in-google-colab">Data analysis in Google Colab</h2>
+<p>At this stage you should have three main spreadsheets:</p>
+<ol type="1">
+<li>A <strong>provenance events master table</strong> (one row per provenance event)</li>
+<li>An <strong>objects table</strong> (one row per object)</li>
+<li>A <strong>parties table</strong> (one row per person or institution)</li>
+</ol>
+<p>Upload all three into Google Colab and load them as dataframes.</p>
+<p>The key point is to preserve <strong>exact column names</strong> (for example <code>object_id</code>, <code>provenance_event_id</code>, <code>party_id_correct</code>), because those are what you will use to connect tables.</p>
+<p>Once the tables share consistent IDs, you can join them and run analyses that combine information across the three datasets. This is the same logic as working with a relational database—but done inside a notebook.</p>
+<section id="example-analysis-question" class="level3">
+<h3 data-anchor-id="example-analysis-question">Example analysis question</h3>
+<p>Which objects were acquired through a purchase (<code>method_of_transfer = purchase</code>) by parties born between X and Y?</p>
+<p>To get reliable results, be explicit in your notebook prompts about:</p>
+<ul>
+<li>which file/table you want to use (events, objects, or parties)</li>
+<li>which columns you want to filter or compare</li>
+<li>which IDs you want to use to connect tables</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you enriched parties with Wikidata, your dataset becomes much more powerful: you can use birth dates, nationality, gender, locations, and identifiers to run richer queries and produce more meaningful interpretations.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="network-time-create-gephi-ready-files-nodes-edges" class="level2">
+<h2 data-anchor-id="network-time-create-gephi-ready-files-nodes-edges">Network time — Create Gephi-ready files (Nodes + Edges)</h2>
+<p>Once your parties are cleaned and your IDs are consistent, you can export networks for Gephi.</p>
+<section id="nodes-file" class="level3">
+<h3 data-anchor-id="nodes-file">1) Nodes file</h3>
+<p>Create a CSV for nodes with column names in lowercase:</p>
+<ul>
+<li><code>id</code> (your final, cleaned party ID)</li>
+<li><code>label</code> (your final, cleaned party name)</li>
+</ul>
+<p>Optional: add extra attributes as additional columns (for example <code>country</code>, <code>gender</code>, <code>type</code>).</p>
+</section>
+<section id="edges-file" class="level3">
+<h3 data-anchor-id="edges-file">2) Edges file</h3>
+<p>Create a CSV for edges with column names:</p>
+<ul>
+<li><code>source</code></li>
+<li><code>target</code></li>
+</ul>
+<p>In this file, you connect <strong>IDs only</strong> (not labels).</p>
+<p>What you connect depends on your network design. Common options include:</p>
+<ul>
+<li><strong>Party → Party</strong> (co-appearance in the same provenance event; co-ownership; transaction relationships)</li>
+<li><strong>Party → Object</strong> (bipartite network)</li>
+<li><strong>Party → Provenance event</strong> (event-based network)</li>
+</ul>
+</section>
+<section id="load-into-gephi" class="level3">
+<h3 data-anchor-id="load-into-gephi">3) Load into Gephi</h3>
+<ol type="1">
+<li>Upload your nodes CSV first.</li>
+<li>Upload your edges CSV second.</li>
+<li>Run a layout and basic metrics, then start exploring the graph.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you paste your exact CSV column names and tell me which network you want (Party–Party, Party–Object, or Party–Event), I can rewrite this “Network time” section with the precise edge logic for your chosen design.</p>
+</div>
 </div>
 
 

@@ -336,6 +336,21 @@ Reuse is encouraged — we happily promote changes of custody. Just be sure to w
 </section>
 
 </main> <!-- /main -->
+<script>
+const PASSWORD = "CPW2025";
+
+function askPassword() {
+  const entered = prompt("Enter the workshop password:");
+  if (entered !== PASSWORD) {
+    document.body.innerHTML = `
+      <h2 style="text-align:center; margin-top:20%; font-family:Helvetica, Arial, sans-serif; color:#333;">
+        ❌ Access denied
+      </h2>`;
+  }
+}
+
+window.addEventListener("load", askPassword);
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {

@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong><a href="https://www.visualcinnamon.com/portfolio/new-york-times-digital-trackers/">VisualCinnamon — New York Times Digital Trackers</a></strong></p></li>
 <li><p><strong><a href="https://tudornetworks.net/">Tudor Networks of Power — Interactive Network Project</a></strong></p></li>
 <li><p><strong><a href="https://giorgialupi.com/data-items-a-fashion-landscape-at-the-museum-of-modern-art">Giorgia Lupi — “Data Items: A Fashion Landscape” (MoMA)</a></strong></p></li>
-<li><p><strong><a href="https://warnke.web.leuphana.de/hyperimage/EbsKart/index.html#V23_007/">Ebstorf Map</a></strong></p></li>
+<li><p><strong><a href="https://warnke.web.leuphana.de/hyperimage/EbsKart/index.html#V23_007/">Ebstorf Map Interactive Environment</a></strong></p></li>
 </ul>
 </section>
 <section id="selected-bibliography" class="level4">
@@ -219,6 +219,21 @@ Reuse is encouraged — we happily promote changes of custody. Just be sure to w
 </section>
 
 </main> <!-- /main -->
+<script>
+const PASSWORD = "CPW2025";
+
+function askPassword() {
+  const entered = prompt("Enter the workshop password:");
+  if (entered !== PASSWORD) {
+    document.body.innerHTML = `
+      <h2 style="text-align:center; margin-top:20%; font-family:Helvetica, Arial, sans-serif; color:#333;">
+        ❌ Access denied
+      </h2>`;
+  }
+}
+
+window.addEventListener("load", askPassword);
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {

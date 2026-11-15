@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - access.html
 
 website:
   title: "Computational Provenance"
@@ -35,6 +37,7 @@ format:
     page-layout: full
     css: styles.css
     include-in-header:
+      - access-gate.html
       - include-fonts.html
     anchor-sections: false
 

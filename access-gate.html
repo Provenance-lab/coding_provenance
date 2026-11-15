@@ -1,0 +1,16 @@
+<!-- First-edition participant gate. Not security: it keeps casual visitors
+     out, nothing more. CP1_ACCESS is a PBKDF2-SHA256 hash of the password
+     (salt "coding-provenance-2025", 310000 iterations). -->
+<meta name="robots" content="noindex, nofollow">
+<script>
+window.CP1_ACCESS = '004c2c450394dd181f2674aae998355e379aaa33064dd112eaee085a92a50979';
+(function () {
+  var page = location.pathname.split('/').pop() || 'index.html';
+  if (page === 'access.html') return;
+  var token = null;
+  try { token = sessionStorage.getItem('cp1-access') || localStorage.getItem('cp1-access'); } catch (e) {}
+  if (token === window.CP1_ACCESS) return;
+  document.documentElement.style.visibility = 'hidden';
+  location.replace('access.html?next=' + encodeURIComponent(page));
+})();
+</script>

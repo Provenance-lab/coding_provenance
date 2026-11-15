@@ -1,1 +1,2 @@
-Sitemap: https://Provenance-lab.github.io/coding_provenance/sitemap.xml
+User-agent: *
+Disallow: /
